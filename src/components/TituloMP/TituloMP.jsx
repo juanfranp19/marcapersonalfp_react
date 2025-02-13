@@ -1,4 +1,4 @@
-const MarcaPersonalFP = () => {
+const TituloMP = () => {
 
     return (
         <h1>Marca Personal FP</h1>
@@ -7,4 +7,4 @@ const MarcaPersonalFP = () => {
     );
 }
 
-export default MarcaPersonalFP;
+export default TituloMP;
