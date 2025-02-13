@@ -19,7 +19,7 @@ const Idioma = (props) => {
     useEffect(asignarIdioma, []);
 
     return (
-        <div className='col-6 cambioIdioma'>
+        <div className='cambioIdioma'>
             <img className='imgBandera' src={icono} alt={alt} />
         </div>
     );

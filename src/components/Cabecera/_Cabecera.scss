@@ -2,6 +2,10 @@
     background-color: $fondoCabecera;
 }
 
-.idioma {
-    text-align: right;
+.btn {
+    background-color: $fondoPagina;
+
+    &:hover {
+        background-color: $enfasis;
+    }
 }
