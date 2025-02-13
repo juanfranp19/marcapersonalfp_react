@@ -1,16 +1,21 @@
 import React from 'react';
 
-import Cabecera from './components/Cabecera';
-import Contenido from './components/Contenido';
+import Cabecera from './components/Cabecera/Cabecera';
+import Contenido from './components/Contenido/Contenido';
 
 
 function App() {
 
   return (
-    <>
-      <Cabecera></Cabecera>
+    <div className='container-fluid'>
+      <div className="row">
+        <div className="col-12">
+          <Cabecera></Cabecera>
+        </div>
+      </div>
+      
       <Contenido></Contenido>
-    </>
+    </div>
   );
 }
 

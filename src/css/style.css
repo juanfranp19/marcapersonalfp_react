@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
+.cabecera {
+  background-color: #e7e7e7;
+}
+
+.idioma {
+  text-align: right;
+}
+
+.logoMP {
+  width: 90%;
+}
+
+.cabecera h1 {
+  color: #ff8800;
+  font-family: "Shadows Into Light", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 50px;
+  text-align: center;
+  padding: 10px 0;
+}
+
+/*  */
+.cambioIdioma {
+  width: 30%;
+  padding: 0;
+}
+
+.imgBandera {
+  width: 70%;
+}
+
+body {
+  background-color: #d8d8d8;
+  width: 100%;
+}/*# sourceMappingURL=style.css.map */

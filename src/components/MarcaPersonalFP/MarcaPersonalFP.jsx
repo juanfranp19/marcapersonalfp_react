@@ -1,7 +1,7 @@
-const MarcaPersonalFP = (props) => {
+const MarcaPersonalFP = () => {
 
     return (
-        <div className={props.clase}>Marca Personal FP</div>
+        <h1>Marca Personal FP</h1>
 
         // para poder usarlo tanto en la cabecera como en el pie de página
     );
