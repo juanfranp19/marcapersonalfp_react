@@ -1,12 +1,16 @@
 import { Link } from 'react-router-dom';
-import MenuImagen from '../MenuImagen/MenuImagen';
+import Imagen from '../Imagen/Imagen';
 
 const Menu = () => {
     return (
-        <div className='menu'>
-            <div><Link to='/empresa'><MenuImagen cual='empresa'></MenuImagen></Link></div>
-            <div><Link to='/centroeducativo'><MenuImagen cual='centroeducativo'></MenuImagen></Link></div>
-            <div><Link to='/alumno'><MenuImagen cual='alumno'></MenuImagen></Link></div>
+        <div className="row">
+            <div className="col-12">
+                <div className='row menu'>
+                    <div className='menu-item col-4'><Link to='/empresa'><Imagen clase='imgMenu' cual='empresa'></Imagen></Link></div>
+                    <div className='menu-item col-4'><Link to='/centroeducativo'><Imagen clase='imgMenu' cual='centroeducativo'></Imagen></Link></div>
+                    <div className='menu-item col-4'><Link to='/alumno'><Imagen clase='imgMenu' cual='alumno'></Imagen></Link></div>
+                </div>
+            </div>
         </div>
     );
 }

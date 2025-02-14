@@ -1,6 +1,6 @@
-import Idioma from "../Idioma/Idioma";
-import LogoMP from "../LogoMP/LogoMP";
+
 import TituloMP from "../TituloMP/TituloMP";
+import Imagen from "../Imagen/Imagen";
 
 const Cabecera = () => {
 
@@ -10,7 +10,7 @@ const Cabecera = () => {
         <nav className="cabecera navbar navbar-expand-sm">
           <div className="container-fluid">
             <a className="navbar-brand" href="javascript:void(0)">
-              <LogoMP donde="cabecera"></LogoMP>
+              <Imagen clase='logoMP' cual='logoMP'></Imagen>
             </a>
             <button className="navbar-toggler btn btn-seconday btn-lg" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
               <span className="navbar-toggler-icon"></span>
@@ -20,8 +20,8 @@ const Cabecera = () => {
                 <TituloMP></TituloMP>
               </div>
               <div className="d-flex">
-                <Idioma idioma="es"></Idioma>
-                <Idioma idioma="en"></Idioma>
+                <Imagen clase='imgBandera' cual="es"></Imagen>
+                <Imagen clase='imgBandera' cual="en"></Imagen>
               </div>
             </div>
           </div>

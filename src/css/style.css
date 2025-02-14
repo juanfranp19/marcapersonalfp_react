@@ -14,6 +14,15 @@
   width: 100px;
 }
 
+.imgBandera {
+  width: 50px;
+  padding: 10px;
+}
+
+.imgMenu {
+  width: 100%;
+}
+
 .cabecera h1 {
   color: #ff8800;
   font-family: "Shadows Into Light", serif;
@@ -25,16 +34,10 @@
 }
 
 /*  */
-/* .cambioIdioma {
-    width: 30%;
-    padding: 0;
-    background-color: aqua;
-} */
-.imgBandera {
-  width: 50px;
-  padding: 10px;
+/* img {
+    width: 100%;
 }
-
+ */
 body {
   background-color: #d8d8d8;
 }/*# sourceMappingURL=style.css.map */

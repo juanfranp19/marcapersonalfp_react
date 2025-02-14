@@ -5,6 +5,8 @@ import empresaJPG from '../assets/images/empresa.jpg';
 import centroJPG from '../assets/images/school.jpg';
 import alumnoJPG from '../assets/images/student.jpg';
 
+import logoMP from "../assets/logo/mp-logoNaranja100.png";
+
 const useImagen = (props) => {
 
     const [imagen, setImagen] = useState({ img: 'sin imagen', alt: '' });
@@ -26,6 +28,9 @@ const useImagen = (props) => {
                 break;
             case 'alumno':
                 setImagen({ ...imagen, img: alumnoJPG, alt: 'Alumno' });
+                break;
+            case 'logoMP':
+                setImagen({ ...imagen, img: logoMP, alt: 'Logo Marca Personal' });
                 break;
         }
     }
