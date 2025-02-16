@@ -1,11 +1,20 @@
-$fondoPagina: #d8d8d8;
+// tonalidades
+$tonoBlanco: #f1f1e6;
 
-$fondoCabecera: #e7e7e7;
+// fondo de la página
+$fondoPagina: #9cb7c3;
 
-$fondoPie: #204768;
-$colorPie: #ffffff;
+// enfasis
+$enfasis: #5f4162;
+$enfasis-translucido: #5f4162cb;
 
-$enfasis: #ff8800;
+// cabecera
+$fondoCabecera: #364f59/*  */;
+$colorTitulo: $tonoBlanco;
 
-$colorTextoImagen: #ffffff;
-$enfasis-translucido: #ffa50099;
+// contenido
+$colorTextoImagen: $tonoBlanco;
+
+// pie
+$fondoPie: #041f27;
+$colorPie: $tonoBlanco;
