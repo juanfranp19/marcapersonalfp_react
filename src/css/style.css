@@ -2,24 +2,20 @@
 .cabecera {
   background-color: #e7e7e7;
 }
-
-.btn {
-  background-color: #adadad;
+.cabecera .btn {
+  background-color: #d8d8d8;
 }
-.btn:hover {
+.cabecera .btn:hover {
   background-color: #ff8800;
 }
-
-.logoMP {
+.cabecera .logoMP {
   width: 100px;
 }
-
-.imgBandera {
+.cabecera .imgBandera {
   width: 50px;
   padding: 10px;
 }
-
-.navbar-brand {
+.cabecera .navbar-brand {
   cursor: pointer;
 }
 
@@ -33,26 +29,20 @@
   padding: 10px 0;
 }
 
-/* img {
-    width: 100%;
-}
- */
 .menuHome {
   margin: 130px 0;
 }
-/* Variables */
-/* Contenedor de la imagen */
-.menuHome-item {
+.menuHome .menuHome-item {
   position: relative;
   overflow: hidden;
   border-radius: 10px;
 }
-.menuHome-item .imgMenuHome {
+.menuHome .menuHome-item .imgMenuHome {
   width: 100%;
-  background-color: aliceblue;
+  background-color: #e7e7e7;
   padding: 30px 0;
 }
-.menuHome-item .capa {
+.menuHome .menuHome-item .capa {
   position: absolute;
   top: 0;
   left: 0;
@@ -65,8 +55,8 @@
   opacity: 0;
   transition: opacity 0.4s ease-in-out;
 }
-.menuHome-item .titulo {
-  color: white;
+.menuHome .menuHome-item .titulo {
+  color: #ffffff;
   font-size: 24px;
   font-weight: bold;
   text-align: center;
@@ -74,10 +64,10 @@
   transform: translateY(20px);
   transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
 }
-.menuHome-item:hover .capa {
+.menuHome .menuHome-item:hover .capa {
   opacity: 1;
 }
-.menuHome-item:hover .titulo {
+.menuHome .menuHome-item:hover .titulo {
   opacity: 1;
   transform: translateY(0);
 }
@@ -110,25 +100,23 @@ footer .contadores .numContador {
 .infoCarlosIII {
   margin-bottom: 30px;
 }
-
-.nombreCarlosIII {
+.infoCarlosIII .nombreCarlosIII {
   font-size: 20px;
   font-weight: bold;
 }
-.nombreCarlosIII a {
+.infoCarlosIII .nombreCarlosIII a {
   color: #ffffff;
   text-decoration: none;
 }
-.nombreCarlosIII a:hover {
+.infoCarlosIII .nombreCarlosIII a:hover {
   color: #ff8800;
 }
-
-.redes-sociales a {
+.infoCarlosIII .redes-sociales a {
   padding: 5px;
   font-size: 25px;
   color: #ffffff;
 }
-.redes-sociales a:hover {
+.infoCarlosIII .redes-sociales a:hover {
   color: #ff8800;
 }
 

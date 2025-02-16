@@ -1,6 +1,9 @@
+// librerías
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
+// componentes
 import Cabecera from './components/Cabecera/Cabecera';
+// páginas
 import Home from './pages/Home';
 import Empresa from './pages/Empresa';
 import CentroEducativo from './pages/CentroEducativo';
@@ -18,7 +21,6 @@ function App() {
         <Route path='/centroeducativo' element={<CentroEducativo></CentroEducativo>}></Route>
         <Route path='/alumno' element={<Alumno></Alumno>}></Route>
       </Routes>
-
     </div>
   );
 }

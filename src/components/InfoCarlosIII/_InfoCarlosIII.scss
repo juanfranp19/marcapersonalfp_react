@@ -1,24 +1,28 @@
-.nombreCarlosIII {
-    font-size: 20px;
-    font-weight: bold;
-    a {
-        color: $colorPie;
-        text-decoration: none;
+.infoCarlosIII {
+    margin-bottom: 30px;
 
-        &:hover {
-            color: $enfasis;
+    .nombreCarlosIII {
+        font-size: 20px;
+        font-weight: bold;
+        a {
+            color: $colorPie;
+            text-decoration: none;
+    
+            &:hover {
+                color: $enfasis;
+            }
         }
     }
-}
-
-.redes-sociales {    
-    a {
-        padding: 5px;
-        font-size: 25px;
-        color: $colorPie;
-
-        &:hover {
-            color: $enfasis;
+    
+    .redes-sociales {    
+        a {
+            padding: 5px;
+            font-size: 25px;
+            color: $colorPie;
+    
+            &:hover {
+                color: $enfasis;
+            }
         }
     }
 }

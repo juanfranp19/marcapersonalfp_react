@@ -1,11 +1,14 @@
+// librerías
 import { useEffect, useState } from 'react';
+// iconos
 import esIcon from '../assets/icons/flag-for-flag-spain-svgrepo-com.svg';
 import enIcon from '../assets/icons/united-kingdom-uk-svgrepo-com.svg';
+// imágenes
 import empresaJPG from '../assets/images/empresa.jpg';
 import centroJPG from '../assets/images/school.jpg';
 import alumnoJPG from '../assets/images/student.jpg';
-
-import logoMP from "../assets/logo/mp-logoNaranja100.png";
+// logos
+import logoMP from '../assets/logo/mp-logoNaranja100.png';
 import logoMPfooter from '../assets/logo/mp-logoReves.png';
 
 const useImagen = (props) => {

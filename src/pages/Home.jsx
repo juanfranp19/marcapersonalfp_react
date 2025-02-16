@@ -1,10 +1,13 @@
-import MenuHome from "../components/MenuHome/MenuHome";
-import Pie from "../components/Pie/Pie";
+// librerías
+import React from 'react';
+// componentes
+import MenuHome from '../components/MenuHome/MenuHome';
+import Pie from '../components/Pie/Pie';
 
 const Home = () => {
   return (
-    <div className="row">
-      <div className="col-12">
+    <div className='row'>
+      <div className='col-12'>
         <MenuHome></MenuHome>
         <Pie></Pie>
       </div>

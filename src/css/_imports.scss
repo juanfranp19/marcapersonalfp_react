@@ -1,14 +1,12 @@
 @import 'variables';
 
+// cabecera
 @import '../components/Cabecera/Cabecera';
-
-//@import '../components/LogoMP/LogoMP';
 @import '../components/TituloMP/TituloMP';
-//@import '../components/Idioma/Idioma';
 
-@import '../components/Imagen/Imagen';
-
+// home
 @import '../components/MenuHome/MenuHome';
-@import '../components/Pie/Pie';
 
+// pie
+@import '../components/Pie/Pie';
 @import '../components/InfoCarlosIII/InfoCarlosIII';

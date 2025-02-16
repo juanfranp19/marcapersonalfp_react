@@ -1,4 +1,7 @@
+// librerías
+import React from 'react';
 import { useEffect, useState } from 'react';
+// servicios
 import getCount from '../../services/getCount';
 
 const Contador = (props) => {
@@ -34,11 +37,11 @@ const Contador = (props) => {
     useEffect(obtenerTitulo, []);
 
     return (
-        <div className="row">
-            <div className="col-12">
+        <div className='row'>
+            <div className='col-12'>
                 <h1>{titulo}</h1>
             </div>
-            <div className="col-12">
+            <div className='col-12'>
                 <span className='numContador'>{count.count}</span>
             </div>
         </div>

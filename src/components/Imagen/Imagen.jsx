@@ -1,3 +1,6 @@
+// librerías
+import React from 'react';
+// hooks
 import useImagen from '../../hooks/useImagen';
 
 const Imagen = (props) => {
