@@ -1,0 +1,36 @@
+footer {
+    background-color: $fondoPie;
+    color: $colorPie;
+    font-size: 13px;
+    text-align: center;
+
+    .logoFooter {
+        width: 65px;
+        margin: 0 0 20px 0;
+    }
+
+    .tituloMP {
+        font-weight: bold;
+    }
+
+    .contadores {
+        background-color: $enfasis;
+        margin-bottom: 20px;
+
+        h1 {
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        .numContador {
+            font-size: 50px;
+        }
+    }
+
+    
+}
+
+
+.infoCarlosIII {
+    margin-bottom: 30px;
+}

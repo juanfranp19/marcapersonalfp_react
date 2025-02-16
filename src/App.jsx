@@ -1,13 +1,13 @@
 import React from 'react';
 import Cabecera from './components/Cabecera/Cabecera';
-import Contenido from './components/Contenido/Contenido';
+import Home from './pages/Home';
 
 function App() {
 
   return (
     <div className='container-fluid'>
       <Cabecera></Cabecera>
-      <Contenido></Contenido>
+      <Home></Home>
     </div>
   );
 }

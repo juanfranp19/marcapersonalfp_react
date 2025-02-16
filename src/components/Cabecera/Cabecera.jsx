@@ -5,9 +5,8 @@ import Imagen from "../Imagen/Imagen";
 const Cabecera = () => {
 
   return (
-    <div className="row">
-      <div className="col-12">
-        <nav className="cabecera navbar navbar-expand-sm">
+    <nav className="row">
+      <div className="col-12 cabecera navbar navbar-expand-md">
           <div className="container-fluid">
             <a className="navbar-brand" href="javascript:void(0)">
               <Imagen clase='logoMP' cual='logoMP'></Imagen>
@@ -17,7 +16,7 @@ const Cabecera = () => {
             </button>
             <div className="collapse navbar-collapse" id="mynavbar">
               <div className="navbar-nav mx-auto">
-                <TituloMP></TituloMP>
+                <h1><TituloMP></TituloMP></h1>
               </div>
               <div className="d-flex">
                 <Imagen clase='imgBandera' cual="es"></Imagen>
@@ -25,9 +24,8 @@ const Cabecera = () => {
               </div>
             </div>
           </div>
-        </nav>
       </div>
-    </div>
+    </nav>
   );
 }
 
