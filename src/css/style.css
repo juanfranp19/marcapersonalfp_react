@@ -11,8 +11,25 @@
 .cabecera .logoMP {
   width: 100px;
 }
+.cabecera .logoMP:hover {
+  background-image: url("../../assets/logo/mp-logoReves.png");
+}
 .cabecera .navbar-brand {
   cursor: pointer;
+}
+.cabecera .navbar-brand .logoMP {
+  width: 100px;
+  display: block;
+}
+.cabecera .navbar-brand .logoMP-hover {
+  width: 100px;
+  display: none;
+}
+.cabecera .navbar-brand:hover .logoMP {
+  display: none;
+}
+.cabecera .navbar-brand:hover .logoMP-hover {
+  display: block;
 }
 
 .cabecera h1 {

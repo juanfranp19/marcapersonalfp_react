@@ -9,6 +9,7 @@ import centroJPG from '../assets/images/school.jpg';
 import alumnoJPG from '../assets/images/student.jpg';
 // logos
 import logoMP from '../assets/logo/mp-logoNaranja100.png';
+import logoMPhover from '../assets/logo/mp-logoNaranja10fondo.png';
 import logoMPfooter from '../assets/logo/mp-logoReves.png';
 
 const useImagen = (props) => {
@@ -35,6 +36,9 @@ const useImagen = (props) => {
                 break;
             case 'logoMP':
                 setImagen({ ...imagen, img: logoMP, alt: 'Logo Marca Personal' });
+                break;
+            case 'logoMP-hover':
+                setImagen({ ...imagen, img: logoMPhover, alt: 'Logo Marca Personal' });
                 break;
             case 'logoMPfooter':
                 setImagen({ ...imagen, img: logoMPfooter, alt: 'Logo Marca Personal' });

@@ -28,6 +28,7 @@ const Cabecera = (props) => {
         <div className='container-fluid'>
           <div className='navbar-brand' onClick={aHome}>
             <Imagen clase='logoMP' cual='logoMP'></Imagen>
+            <Imagen clase='logoMP-hover' cual='logoMP-hover'></Imagen>
           </div>
           <button className='navbar-toggler btn btn-seconday btn-lg' type='button' data-bs-toggle='collapse' data-bs-target='#mynavbar'>
             <span className='navbar-toggler-icon'></span>

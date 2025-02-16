@@ -3,17 +3,41 @@
 
     .btn {
         background-color: $fondoPagina;
-    
+
         &:hover {
             background-color: $enfasis;
         }
     }
-    
+
     .logoMP {
         width: 100px;
+
+        &:hover {
+            background-image: url('../../assets/logo/mp-logoReves.png');
+        }
     }
-    
+
     .navbar-brand {
         cursor: pointer;
-    }    
+
+        .logoMP {
+            width: 100px;
+            display: block;
+        }
+
+        .logoMP-hover {
+            width: 100px;
+            display: none;
+        }
+
+        &:hover {
+            .logoMP {
+                display: none;
+            }
+
+            .logoMP-hover {
+                display: block;
+            }
+        }
+    }
 }
