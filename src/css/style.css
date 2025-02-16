@@ -19,6 +19,10 @@
   padding: 10px;
 }
 
+.navbar-brand {
+  cursor: pointer;
+}
+
 .cabecera h1 {
   color: #ff8800;
   font-family: "Shadows Into Light", serif;
