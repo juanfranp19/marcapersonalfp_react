@@ -18,11 +18,11 @@ const Pie = () => {
         <footer className='row'>
             <div className='col-12'>
                 <div className='row'>
-                    <div className='offset-1 col-10 contadores'>
+                    <div className='col-12 col-md-10 offset-md-1 contadores'>
                         <div className='row text-center'>
-                            <div className='col-4 contador'><Contador cual='empresas'></Contador></div>
-                            <div className='col-4 contador'><Contador cual='proyectos'></Contador></div>
-                            <div className='col-4 contador'><Contador cual='users'></Contador></div>
+                            <div className='col-12 col-sm-4 contador'><Contador cual='empresas'></Contador></div>
+                            <div className='col-12 col-sm-4 contador'><Contador cual='proyectos'></Contador></div>
+                            <div className='col-12 col-sm-4 contador'><Contador cual='users'></Contador></div>
                         </div>
                     </div>
                 </div>

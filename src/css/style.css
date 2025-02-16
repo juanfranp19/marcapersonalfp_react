@@ -40,11 +40,24 @@
   position: relative;
   overflow: hidden;
   border-radius: 10px;
+  margin-bottom: 40px;
 }
 .menuHome .menuHome-item .imgMenuHome {
   width: 100%;
   background-color: #e7e7e7;
   padding: 30px 0;
+}
+@media screen and (min-width: 576px) {
+  .menuHome .menuHome-item .imgMenuHome {
+    margin: 0 auto;
+    display: block;
+    width: 70%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .menuHome .menuHome-item .imgMenuHome {
+    width: 100%;
+  }
 }
 .menuHome .menuHome-item .capa {
   position: absolute;
@@ -92,10 +105,11 @@ footer .tituloMP {
 footer .contadores {
   background-color: #ff8800;
   margin-bottom: 20px;
+  padding: 20px 0 10px 0;
 }
 footer .contadores h1 {
-  font-weight: bold;
-  font-size: 15px;
+  font-weight: light;
+  font-size: 20px;
 }
 footer .contadores .numContador {
   font-size: 50px;

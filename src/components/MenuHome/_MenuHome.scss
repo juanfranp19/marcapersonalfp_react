@@ -5,11 +5,22 @@
         position: relative;
         overflow: hidden;
         border-radius: 10px;
+        margin-bottom: 40px;
     
         .imgMenuHome {
             width: 100%;
             background-color: $fondoCabecera;
-            padding: 30px 0
+            padding: 30px 0;
+
+            @media screen and (min-width: 576px) {
+                margin: 0 auto;
+                display: block;
+                width: 70%;
+            }
+
+            @media screen and (min-width: 768px) {
+                width: 100%;
+            }
         }
     
         .capa {

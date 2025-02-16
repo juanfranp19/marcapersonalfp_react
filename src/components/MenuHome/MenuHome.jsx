@@ -16,7 +16,7 @@ const MenuHome = () => {
         <div className='row'>
             <div className='col-12'>
                 <div className='row menuHome'>
-                    <div className='menuHome-item col-4'>
+                    <div className='menuHome-item col-12 col-md-4'>
                         <Link to='/empresa'>
                             <Imagen clase='imgMenuHome' cual='empresa'></Imagen>
                             <div className='capa'>
@@ -26,7 +26,7 @@ const MenuHome = () => {
                             </div>
                         </Link>
                     </div>
-                    <div className='menuHome-item col-4'>
+                    <div className='menuHome-item col-12 col-md-4'>
                         <Link to='/centroeducativo'>
                             <Imagen clase='imgMenuHome' cual='centroeducativo'></Imagen>
                             <div className='capa'>
@@ -36,7 +36,7 @@ const MenuHome = () => {
                             </div>
                         </Link>
                     </div>
-                    <div className='menuHome-item col-4'>
+                    <div className='menuHome-item col-12 col-md-4'>
                         <Link to='/alumno'>
                             <Imagen clase='imgMenuHome' cual='alumno'></Imagen>
                             <div className='capa'>
