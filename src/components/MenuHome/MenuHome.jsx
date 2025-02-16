@@ -1,10 +1,16 @@
 // librerías
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 // componentes
 import Imagen from '../Imagen/Imagen';
+// contextos
+import TraduccionContext from '../../contexts/TraduccionContext';
+// mock 
+import traducciones from '../../mock-traducciones';
 
 const MenuHome = () => {
+
+    const idioma = useContext(TraduccionContext);
 
     return (
         <div className='row'>
@@ -15,7 +21,7 @@ const MenuHome = () => {
                             <Imagen clase='imgMenuHome' cual='empresa'></Imagen>
                             <div className='capa'>
                                 <h1 className='titulo'>
-                                    Empresas
+                                    {traducciones[idioma].menuHome.empresa}
                                 </h1>
                             </div>
                         </Link>
@@ -25,7 +31,7 @@ const MenuHome = () => {
                             <Imagen clase='imgMenuHome' cual='centroeducativo'></Imagen>
                             <div className='capa'>
                                 <h1 className='titulo'>
-                                    Centro educativo
+                                    {traducciones[idioma].menuHome.centro}
                                 </h1>
                             </div>
                         </Link>
@@ -35,7 +41,7 @@ const MenuHome = () => {
                             <Imagen clase='imgMenuHome' cual='alumno'></Imagen>
                             <div className='capa'>
                                 <h1 className='titulo'>
-                                    Alumnos
+                                    {traducciones[idioma].menuHome.alumnos}
                                 </h1>
                             </div>
                         </Link>

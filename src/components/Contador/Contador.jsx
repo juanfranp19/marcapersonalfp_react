@@ -1,14 +1,20 @@
 // librerías
-import React from 'react';
-import { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 // servicios
 import getCount from '../../services/getCount';
+// contextos
+import TraduccionContext from '../../contexts/TraduccionContext';
+// mock
+import traducciones from '../../mock-traducciones';
 
 const Contador = (props) => {
 
     const cual = props.cual;
+    
     const [titulo, setTitulo] = useState();
     const [count, setCount] = useState([]);
+
+    const idioma = useContext(TraduccionContext);
 
     function obtenerCount() {
         getCount(cual)
@@ -20,21 +26,23 @@ const Contador = (props) => {
     function obtenerTitulo() {
         switch (cual) {
             case 'empresas':
-                setTitulo('Empresas');
+                setTitulo(traducciones[idioma].contador.empresa);
                 break;
             case 'proyectos':
-                setTitulo('Proyectos');
+                setTitulo(traducciones[idioma].contador.proyectos);
                 break;
             case 'users':
-                setTitulo('Alumnos');
+                setTitulo(traducciones[idioma].contador.alumnos);
                 break;
             default:
                 break;
         }
     }
 
-    useEffect(obtenerCount, []);
-    useEffect(obtenerTitulo, []);
+    useEffect(() => (
+        obtenerCount(),
+        obtenerTitulo()
+    ), [idioma]);
 
     return (
         <div className='row'>

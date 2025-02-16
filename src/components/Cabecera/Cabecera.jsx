@@ -1,16 +1,25 @@
 // librerías
-import React from 'react';
+import React, { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 // componentes
 import TituloMP from '../TituloMP/TituloMP';
 import Imagen from '../Imagen/Imagen';
+import SelectorIdioma from '../SelectorIdioma/SelectorIdioma';
+// contextos
+import TraduccionContext from '../../contexts/TraduccionContext';
 
-const Cabecera = () => {
+const Cabecera = (props) => {
 
   const navegateTo = useNavigate();
+  const idiomaSeleccionado = useContext(TraduccionContext);
 
   function aHome() {
     navegateTo('/');
+  }
+
+  function manejarSeleccionIdioma(idioma) {
+    props.manejarSeleccionIdioma(idioma);
+    console.log(idioma);
   }
 
   return (
@@ -27,10 +36,7 @@ const Cabecera = () => {
             <div className='navbar-nav mx-auto'>
               <h1><TituloMP></TituloMP></h1>
             </div>
-            <div className='d-flex'>
-              <Imagen clase='imgBandera' cual='es'></Imagen>
-              <Imagen clase='imgBandera' cual='en'></Imagen>
-            </div>
+            <SelectorIdioma idioma={idiomaSeleccionado} manejarSeleccion={manejarSeleccionIdioma}></SelectorIdioma>
           </div>
         </div>
       </div>

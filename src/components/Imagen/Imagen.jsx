@@ -8,7 +8,7 @@ const Imagen = (props) => {
     const imagen = useImagen(props.cual);
 
     return (
-        <img className={props.clase} src={imagen.img} alt={imagen.alt} />
+        <img className={props.clase} src={imagen.img} alt={imagen.alt} onClick={props.onClick}/>
     );
 }
 

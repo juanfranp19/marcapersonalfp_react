@@ -11,10 +11,6 @@
 .cabecera .logoMP {
   width: 100px;
 }
-.cabecera .imgBandera {
-  width: 50px;
-  padding: 10px;
-}
 .cabecera .navbar-brand {
   cursor: pointer;
 }
@@ -27,6 +23,14 @@
   font-size: 50px;
   text-align: center;
   padding: 10px 0;
+}
+
+.imgBandera {
+  width: 30px;
+  margin: 10px;
+}
+.imgBandera:hover {
+  cursor: pointer;
 }
 
 .menuHome {
