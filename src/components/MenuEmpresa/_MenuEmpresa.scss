@@ -1,0 +1,16 @@
+.menu-empresa {
+
+    color: $enfasis;
+    text-decoration: none;
+    .active, .active a {
+        background-color: $transparente !important;
+        color: $enfasis;
+        text-decoration: none;
+        
+    }
+
+    a {
+        color: $tonoBlanco;
+        text-decoration: none;
+    }
+}

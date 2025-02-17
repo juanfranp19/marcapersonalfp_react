@@ -106,6 +106,20 @@
   transform: translateY(0);
 }
 
+.menu-empresa {
+  color: #5f4162;
+  text-decoration: none;
+}
+.menu-empresa .active, .menu-empresa .active a {
+  background-color: rgba(255, 255, 255, 0) !important;
+  color: #5f4162;
+  text-decoration: none;
+}
+.menu-empresa a {
+  color: #f1f1e6;
+  text-decoration: none;
+}
+
 footer {
   background-color: #041f27;
   color: #f1f1e6;
