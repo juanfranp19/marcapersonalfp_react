@@ -3,7 +3,7 @@
   background-color: #364f59;
 }
 .cabecera .btn {
-  background-color: #9cb7c3;
+  background-color: #8ba1aa;
 }
 .cabecera .btn:hover {
   background-color: #5f4162;
@@ -117,6 +117,7 @@
 .menu-empresa .nav-item .active, .menu-empresa .nav-item .active a {
   background-color: rgba(255, 255, 255, 0) !important;
   color: #5f4162;
+  font-weight: bold;
   text-decoration: none;
 }
 .menu-empresa .nav-item .nav-link-hover {
@@ -185,6 +186,6 @@ footer .contadores .numContador {
 }
 
 body {
-  background-color: #9cb7c3;
+  background-color: #8ba1aa;
   padding: 0 15px;
 }/*# sourceMappingURL=style.css.map */
