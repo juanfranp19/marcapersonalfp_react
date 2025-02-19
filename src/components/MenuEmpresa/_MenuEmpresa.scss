@@ -1,16 +1,41 @@
 .menu-empresa {
-
     color: $enfasis;
     text-decoration: none;
-    .active, .active a {
-        background-color: $transparente !important;
-        color: $enfasis;
-        text-decoration: none;
-        
-    }
 
     a {
         color: $tonoBlanco;
         text-decoration: none;
+    }
+
+    .nav-item {
+        .active, .active a {
+            background-color: $transparente !important;
+            color: $enfasis;
+            text-decoration: none;
+        }
+
+        .nav-link-hover {
+            display: none;
+        }
+
+        .nav-link-nohover {
+            &.active {
+                display: none;
+
+                + .nav-link-hover {
+                    display: block;
+                }
+            }
+        }
+
+        &:hover {
+            .nav-link-nohover {
+                display: none;
+            }
+
+            .nav-link-hover {                
+                display: block;
+            }
+        }
     }
 }

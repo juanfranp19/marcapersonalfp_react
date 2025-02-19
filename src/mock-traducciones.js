@@ -5,6 +5,11 @@ const traducciones = {
             centro: 'Centro educativo',
             alumnos: 'Alumnos'
         },
+        menuEmpresa: {
+            empresa: 'Empresas',
+            proyectos: 'Proyectos',
+            alumnos: 'Alumnos'
+        },
         contador: {
             empresa: 'Empresas',
             proyectos: 'Proyectos',
@@ -18,6 +23,11 @@ const traducciones = {
         menuHome: {
             empresa: 'Companies',
             centro: 'School',
+            alumnos: 'Students'
+        },
+        menuEmpresa: {
+            empresa: 'Companies',
+            proyectos: 'Projects',
             alumnos: 'Students'
         },
         contador: {

@@ -110,14 +110,29 @@
   color: #5f4162;
   text-decoration: none;
 }
-.menu-empresa .active, .menu-empresa .active a {
+.menu-empresa a {
+  color: #f1f1e6;
+  text-decoration: none;
+}
+.menu-empresa .nav-item .active, .menu-empresa .nav-item .active a {
   background-color: rgba(255, 255, 255, 0) !important;
   color: #5f4162;
   text-decoration: none;
 }
-.menu-empresa a {
-  color: #f1f1e6;
-  text-decoration: none;
+.menu-empresa .nav-item .nav-link-hover {
+  display: none;
+}
+.menu-empresa .nav-item .nav-link-nohover.active {
+  display: none;
+}
+.menu-empresa .nav-item .nav-link-nohover.active + .nav-link-hover {
+  display: block;
+}
+.menu-empresa .nav-item:hover .nav-link-nohover {
+  display: none;
+}
+.menu-empresa .nav-item:hover .nav-link-hover {
+  display: block;
 }
 
 footer {
