@@ -229,8 +229,10 @@
 }
 .card h1 {
   font-size: 20px;
-  text-align: center;
   padding: 5px 0px 5px 0px;
+}
+.card h2, .card p {
+  margin-left: 10px;
 }
 .card h2 {
   font-size: 15px;
@@ -241,6 +243,14 @@
 }
 .card span {
   font-weight: bold;
+}
+.card .btn {
+  color: #5f4162;
+  border-color: #5f4162;
+}
+.card .btn:hover {
+  color: #f1f1e6;
+  background-color: #5f4162;
 }
 .card .boton-ver {
   padding: 20px 11px 0px 11px;

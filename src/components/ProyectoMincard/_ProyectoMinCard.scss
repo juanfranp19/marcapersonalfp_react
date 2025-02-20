@@ -3,8 +3,11 @@
 
     h1 {
         font-size: 20px;
-        text-align: center;
         padding: 5px 0px 5px 0px;
+    }
+
+    h2, p {
+        margin-left: 10px;
     }
 
     h2 {
@@ -18,6 +21,16 @@
 
     span {
         font-weight: bold;
+    }
+
+    .btn {
+        color: $enfasis;
+        border-color: $enfasis;;
+
+        &:hover {
+            color: $tonoBlanco;
+            background-color: $enfasis;
+        }
     }
 
     .boton-ver {
