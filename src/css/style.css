@@ -224,6 +224,28 @@
   transform: translateY(-2px);
 }
 
+.card {
+  border-radius: 15px;
+}
+.card h1 {
+  font-size: 20px;
+  text-align: center;
+  padding: 5px 0px 5px 0px;
+}
+.card h2 {
+  font-size: 15px;
+  font-weight: bold;
+}
+.card p {
+  font-size: 12px;
+}
+.card span {
+  font-weight: bold;
+}
+.card .boton-ver {
+  padding: 20px 11px 0px 11px;
+}
+
 footer {
   background-color: #041f27;
   color: #f1f1e6;
