@@ -7,7 +7,7 @@ const Alumnos = () => {
     return (
         <div className="row">
             <div className="col-12">
-                <MenuEmpresa></MenuEmpresa>
+                
             </div>
         </div>
     );

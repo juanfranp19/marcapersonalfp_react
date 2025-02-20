@@ -12,10 +12,10 @@ const Empresa = () => {
             <div className="col-12">
                 <MenuEmpresa></MenuEmpresa>
 
-                {/* <Routes>
-                    <Route path='/empresa/proyectos' element={<Proyectos></Proyectos>}></Route>
-                    <Route path='/empresa/alumnos' element={<Alumnos></Alumnos>}></Route>
-                </Routes> */}
+                <Routes>
+                    <Route path='proyectos' element={<Proyectos></Proyectos>}></Route>
+                    <Route path='alumnos' element={<Alumnos></Alumnos>}></Route>
+                </Routes>
             </div>
         </div>
     );

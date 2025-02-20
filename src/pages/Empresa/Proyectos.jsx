@@ -8,7 +8,6 @@ const Proyectos = () => {
     return (
         <div className="row">
             <div className="col-12">
-                <MenuEmpresa></MenuEmpresa>
                 <ListaFamiliasProfesionales></ListaFamiliasProfesionales>
             </div>
         </div>
