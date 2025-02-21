@@ -224,38 +224,6 @@
   transform: translateY(-2px);
 }
 
-.card {
-  border-radius: 15px;
-}
-.card h1 {
-  font-size: 20px;
-  padding: 5px 0px 5px 0px;
-}
-.card h2, .card p {
-  margin-left: 10px;
-}
-.card h2 {
-  font-size: 15px;
-  font-weight: bold;
-}
-.card p {
-  font-size: 12px;
-}
-.card span {
-  font-weight: bold;
-}
-.card .btn {
-  color: #5f4162;
-  border-color: #5f4162;
-}
-.card .btn:hover {
-  color: #f1f1e6;
-  background-color: #5f4162;
-}
-.card .boton-ver {
-  padding: 20px 11px 0px 11px;
-}
-
 footer {
   background-color: #041f27;
   color: #f1f1e6;
@@ -308,4 +276,36 @@ footer .contadores .numContador {
 body {
   background-color: #8ba1aa;
   padding: 0 15px;
+}
+
+.card {
+  border-radius: 15px;
+}
+.card h1 {
+  font-size: 20px;
+  padding: 5px 0px 5px 0px;
+}
+.card h2, .card p {
+  margin-left: 10px;
+}
+.card h2 {
+  font-size: 15px;
+  font-weight: bold;
+}
+.card p {
+  font-size: 12px;
+}
+.card span {
+  font-weight: bold;
+}
+.card .btn {
+  color: #5f4162;
+  border-color: #5f4162;
+}
+.card .btn:hover {
+  color: #f1f1e6;
+  background-color: #5f4162;
+}
+.card .boton-ver {
+  padding: 20px 11px 0px 11px;
 }/*# sourceMappingURL=style.css.map */

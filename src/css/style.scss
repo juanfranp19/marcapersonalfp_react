@@ -4,3 +4,43 @@ body {
     background-color: $fondoPagina;
     padding: 0 15px;
 }
+
+.card {
+    border-radius: 15px;
+
+    h1 {
+        font-size: 20px;
+        padding: 5px 0px 5px 0px;
+    }
+
+    h2, p {
+        margin-left: 10px;
+    }
+
+    h2 {
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+    span {
+        font-weight: bold;
+    }
+
+    .btn {
+        color: $enfasis;
+        border-color: $enfasis;;
+
+        &:hover {
+            color: $tonoBlanco;
+            background-color: $enfasis;
+        }
+    }
+
+    .boton-ver {
+        padding: 20px 11px 0px 11px;
+    }
+}

@@ -4,31 +4,19 @@ import React, { useEffect, useState } from 'react';
 import BotonFamiliaProfesional from '../BotonFamiliaProfesional/BotonFamiliaProfesional';
 // servicios
 import getFamiliasProfesionales from '../../services/getFamiliasProfesionales';
+import useFamiliasProfesionales from '../../hooks/useFamiliasProfesionales';
 
 const ListaFamiliasProfesionales = () => {
 
-    const [listaFamilias, setListaFamilias] = useState([]);
+    const listaFamilias = useFamiliasProfesionales();
 
-    function obtenerFamiliasProfesionales() {
-        getFamiliasProfesionales()
-            .then(datos => {
-                setListaFamilias(datos);
-            });
-    }
-
-    useEffect(obtenerFamiliasProfesionales, []);
-
-    function obtenerBotonesFamilias() {
-        return listaFamilias.map(familia => {
-            return (
-                <BotonFamiliaProfesional key={familia.id} id={familia.codigo} nombre={familia.nombre}></BotonFamiliaProfesional>
-            );
-        });
+    function obtenerBotonesFamilias(familia) {
+        return <BotonFamiliaProfesional key={familia.id} id={familia.codigo} nombre={familia.nombre}></BotonFamiliaProfesional>
     }
 
     return (
         <>
-            {obtenerBotonesFamilias()}
+            {listaFamilias.familiasProfesionales.map(obtenerBotonesFamilias)}
         </>
     );
 
