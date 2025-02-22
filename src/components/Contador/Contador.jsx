@@ -1,7 +1,7 @@
 // librerías
 import React, { useContext, useEffect, useState } from 'react';
-// servicios
-import getCount from '../../services/getCount';
+// hooks
+import useCount from '../../hooks/useCount';
 // contextos
 import TraduccionContext from '../../contexts/TraduccionContext';
 // mock
@@ -9,22 +9,13 @@ import traducciones from '../../mock-traducciones';
 
 const Contador = (props) => {
 
-    const cual = props.cual;
-    
+    const tabla = props.tabla;
     const [titulo, setTitulo] = useState();
-    const [count, setCount] = useState([]);
-
+    const count = useCount(tabla);
     const idioma = useContext(TraduccionContext);
 
-    function obtenerCount() {
-        getCount(cual)
-            .then(count => {
-                setCount(count);
-            });
-    }
-
     function obtenerTitulo() {
-        switch (cual) {
+        switch (tabla) {
             case 'empresas':
                 setTitulo(traducciones[idioma].contador.empresa);
                 break;
@@ -39,10 +30,7 @@ const Contador = (props) => {
         }
     }
 
-    useEffect(() => (
-        obtenerCount(),
-        obtenerTitulo()
-    ), [idioma]);
+    useEffect(obtenerTitulo, [idioma]);
 
     return (
         <div className='row'>

@@ -20,9 +20,9 @@ const Pie = () => {
                 <div className='row'>
                     <div className='col-12 col-md-10 offset-md-1 contadores'>
                         <div className='row text-center'>
-                            <div className='col-12 col-sm-4 contador'><Contador cual='empresas'></Contador></div>
-                            <div className='col-12 col-sm-4 contador'><Contador cual='proyectos'></Contador></div>
-                            <div className='col-12 col-sm-4 contador'><Contador cual='users'></Contador></div>
+                            <div className='col-12 col-sm-4 contador'><Contador tabla='empresas'></Contador></div>
+                            <div className='col-12 col-sm-4 contador'><Contador tabla='proyectos'></Contador></div>
+                            <div className='col-12 col-sm-4 contador'><Contador tabla='users'></Contador></div>
                         </div>
                     </div>
                 </div>

@@ -1,6 +1,6 @@
-const getCount = (cual) => {
+const getCount = (tabla) => {
 
-    return fetch(`http://marcapersonalfp.test/api/v1/${cual}/count`)
+    return fetch(`http://marcapersonalfp.test/api/v1/${tabla}/count`)
         .then(response => {
             const data = response.json();
             console.log(data);
