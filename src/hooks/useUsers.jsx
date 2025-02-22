@@ -1,5 +1,6 @@
-// servicios
+// librerías
 import { useEffect, useState } from 'react';
+// servicios
 import getUsers from '../services/getUsers';
 
 const useUsers = () => {
@@ -15,7 +16,7 @@ const useUsers = () => {
 
     useEffect(obtenerUsers, []);
 
-    return { users };
+    return users;
 }
 
 export default useUsers;

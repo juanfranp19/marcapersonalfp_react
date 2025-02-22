@@ -1,4 +1,6 @@
+// librerías
 import { useEffect, useState } from "react";
+// servicios
 import getFamiliasProfesionales from "../services/getFamiliasProfesionales";
 
 const useFamiliasProfesionales = () => {
@@ -14,7 +16,7 @@ const useFamiliasProfesionales = () => {
 
     useEffect(obtenerFamiliasProfesionales, []);
 
-    return { familiasProfesionales };
+    return familiasProfesionales;
 }
 
 export default useFamiliasProfesionales;

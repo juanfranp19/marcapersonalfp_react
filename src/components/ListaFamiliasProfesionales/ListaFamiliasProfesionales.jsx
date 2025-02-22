@@ -1,9 +1,8 @@
 // librerías
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 // componenetes
 import BotonFamiliaProfesional from '../BotonFamiliaProfesional/BotonFamiliaProfesional';
-// servicios
-import getFamiliasProfesionales from '../../services/getFamiliasProfesionales';
+// hooks
 import useFamiliasProfesionales from '../../hooks/useFamiliasProfesionales';
 
 const ListaFamiliasProfesionales = () => {
@@ -16,7 +15,7 @@ const ListaFamiliasProfesionales = () => {
 
     return (
         <>
-            {listaFamilias.familiasProfesionales.map(obtenerBotonesFamilias)}
+            {listaFamilias.map(obtenerBotonesFamilias)}
         </>
     );
 
