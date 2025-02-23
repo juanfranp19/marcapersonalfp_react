@@ -1,6 +1,18 @@
+// librerías
+import { useEffect, useState } from 'react';
+// mocks
 import banderas from '../../mock-banderas';
+// imágenes
+import imagenAlumnoDefecto from '../../assets/images/alumno.svg';
+
 
 const AlumnoMincard = (props) => {
+
+    const [imagenAlumno, setImagenAlumno] = useState([]);
+
+    function obtenerImagenAlumno() {
+        if (!props.imagen) setImagenAlumno(imagenAlumnoDefecto);
+    } 
 
     function bandera(idioma) {
         return banderas[idioma] ? banderas[idioma].flag : banderas['unknown'].flag;
@@ -16,9 +28,10 @@ const AlumnoMincard = (props) => {
         return (
             <table>
                 <tbody>
-                    <tr>{props.idiomas.map((i, key) => {
+                    <tr>
+                        {props.idiomas.map((i, key) => {
                             return (
-                                <td key={key}>{bandera(i.alpha2)}</td>
+                                <td className='bandera' key={key}>{bandera(i.alpha2)}</td>
                             )
                         })}</tr>
                     <tr>
@@ -31,7 +44,7 @@ const AlumnoMincard = (props) => {
                     <tr>
                         {props.idiomas.map((i, key) => {
                             return (
-                                <td key={key}>{centificado(i.certificado)}</td>
+                                <td className='certificado' key={key}>{centificado(i.certificado)}</td>
                             )
                         })}
                     </tr>
@@ -40,6 +53,8 @@ const AlumnoMincard = (props) => {
         );
     }
 
+    useEffect(obtenerImagenAlumno, []);
+
     return (
         
         <div className="col-12 col-sm-6 col-lg-4 col-xl-3">
@@ -47,7 +62,7 @@ const AlumnoMincard = (props) => {
 
                 <div className="row p-4 card-body">
                     <div className="col-6 col-sm-12 col-md-6 col-lg-12 col-xxl-6">
-                        {/* <img src={imagenProyecto} alt="Proyecto" className="w-100" /> */}
+                        <img src={imagenAlumno} alt="Proyecto" className="w-100" />
                     </div>
 
                     <div className="col-6 col-sm-12 col-md-6 col-lg-12 col-xxl-6">

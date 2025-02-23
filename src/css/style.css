@@ -308,4 +308,15 @@ body {
 }
 .card .boton-ver {
   padding: 20px 11px 0px 11px;
+}
+.card table {
+  text-align: center;
+  font-size: 13px;
+  margin: 0 0 15px 0;
+}
+.card table .bandera {
+  font-size: 20px;
+}
+.card table .certificado {
+  text-align: left;
 }/*# sourceMappingURL=style.css.map */

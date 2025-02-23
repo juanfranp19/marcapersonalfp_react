@@ -25,7 +25,11 @@ const ResultadosBusquedaProyectos = () => {
                     nombre={proyecto.nombre}
                     alumnos={proyecto.participantes.map(p => p.nombre).join(', ')}
                     tutor={proyecto.docente_id}
-                    ciclos={proyecto.ciclos.map(c => c.codCiclo).join(' | ')}
+                    ciclos={
+                        proyecto.ciclos.length < 1
+                        ? 'No hay ciclos'
+                        : proyecto.ciclos.map(c => c.codCiclo).join(' | ')
+                    }
                 />
             );
         });

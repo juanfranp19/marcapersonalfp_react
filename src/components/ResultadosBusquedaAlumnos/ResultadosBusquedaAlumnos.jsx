@@ -13,7 +13,11 @@ const ResultadosBusquedaAlumnos = () => {
                     imagen={user.imagen}
                     name={user.name}
                     idiomas={user.idiomas}
-                    ciclos={user.ciclos.map(c => c.codCiclo).join(' | ')}
+                    ciclos={
+                        user.ciclos.length < 1
+                        ? 'No hay ciclos'
+                        : user.ciclos.map(c => c.codCiclo).join(' | ')
+                    }
                     sobre_mi={user.sobre_mi}
                 />
             );
