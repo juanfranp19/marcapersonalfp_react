@@ -1,10 +1,10 @@
 // librerías
 import { useEffect, useState } from 'react';
+import { Tooltip } from 'react-tooltip';
 // mocks
 import banderas from '../../mock-banderas';
 // imágenes
 import imagenAlumnoDefecto from '../../assets/images/alumno.svg';
-
 
 const AlumnoMincard = (props) => {
 
@@ -18,38 +18,95 @@ const AlumnoMincard = (props) => {
         return banderas[idioma] ? banderas[idioma].flag : banderas['unknown'].flag;
     }
 
+    function nivel(nivel) {
+        let niveles= [];
+
+        switch (nivel) {
+            case 'Básico':
+                niveles = ['A1', 'A2'];
+                break;
+            case 'Intermedio':
+                niveles = ['B1', 'B2'];
+                break;
+            case 'Avanzado':
+                niveles = ['C1', 'C2'];
+                break;
+        }
+
+        const randomNivel = Math.floor(Math.random() * niveles.length);
+
+        return niveles[randomNivel];
+    }
+
     function centificado(certificado) {
         if (certificado === 0) return 'SC';
         if (certificado === 1) return 'C';
     }
 
-    function tablaIdiomas() {
+    function certificadoTooltip(certificado) {
+        if (certificado === 0) return 'sin centificar';
+        if (certificado === 1) return 'certificado';
+    }
 
+    function tablaIdiomas() {
         return (
             <table>
                 <tbody>
                     <tr>
                         {props.idiomas.map((i, key) => {
                             return (
-                                <td className='bandera' key={key}>{bandera(i.alpha2)}</td>
-                            )
+                                <td 
+                                    key={key}
+                                    className='bandera'
+                                    data-tooltip-id={i.alpha2}
+                                >
+                                    {bandera(i.alpha2)}
+                                    <Tooltip id={i.alpha2} content={i.native_name} />
+                                </td>
+                            );
                         })}</tr>
                     <tr>
                         {props.idiomas.map((i, key) => {
                             return (
-                                <td key={key}>{i.nivel}</td>
-                            )
+                                <td key={key}>{nivel(i.nivel)}</td>
+                            );
                         })}
                     </tr>
                     <tr>
                         {props.idiomas.map((i, key) => {
                             return (
-                                <td className='certificado' key={key}>{centificado(i.certificado)}</td>
-                            )
+                                <td 
+                                    key={key}
+                                    className='certificado'
+                                    data-tooltip-id={`id${i.certificado}`}
+                                >
+                                    {centificado(i.certificado)}
+                                    <Tooltip id={`id${i.certificado}`} content={certificadoTooltip(i.certificado)} />
+                                </td>
+                            );
                         })}
                     </tr>
                 </tbody>
             </table>
+        );
+    }
+
+    function ciclos() {
+        return (
+            props.ciclos.length < 1
+            ? 'No hay ciclos'
+            : props.ciclos.map((c, key) => {
+
+                return (
+                    <span 
+                        key={`ciclo-${key}`}
+                        data-tooltip-id={c.codCiclo}
+                    >
+                        {c.codCiclo} |
+                        <Tooltip id={c.codCiclo} content={c.nombre} />
+                    </span>
+                );
+            })
         );
     }
 
@@ -71,14 +128,10 @@ const AlumnoMincard = (props) => {
 
                         {tablaIdiomas()}
 
-                        <p><span>Perfiles.</span></p>
-                        <p><span>Ciclos:</span> {props.ciclos}</p>
+                        <p><span className='negrita'>Perfiles.</span></p>
+                        <div><span className='negrita'>Ciclos: </span>{ciclos()}</div>
 
                     </div>
-
-                    {/* <div className="col-12 boton-ver">
-                        <button type="button" className=" w-100 btn btn-outline-primary">Ver</button>
-                    </div> */}
                 </div>
 
             </div>

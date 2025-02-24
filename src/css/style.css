@@ -292,10 +292,10 @@ body {
   font-size: 15px;
   font-weight: bold;
 }
-.card p {
+.card div, .card p {
   font-size: 12px;
 }
-.card span {
+.card .negrita {
   font-weight: bold;
 }
 .card .btn {
@@ -317,6 +317,7 @@ body {
 .card table .bandera {
   font-size: 20px;
 }
-.card table .certificado {
-  text-align: left;
+
+.react-tooltip {
+  z-index: 9999;
 }/*# sourceMappingURL=style.css.map */

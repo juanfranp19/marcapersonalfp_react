@@ -1,4 +1,6 @@
+// hooks
 import useUsers from '../../hooks/useUsers';
+// componentes
 import AlumnoMincard from '../AlumnoMincard/AlumnoMincard';
 
 const ResultadosBusquedaAlumnos = () => {
@@ -13,11 +15,7 @@ const ResultadosBusquedaAlumnos = () => {
                     imagen={user.imagen}
                     name={user.name}
                     idiomas={user.idiomas}
-                    ciclos={
-                        user.ciclos.length < 1
-                        ? 'No hay ciclos'
-                        : user.ciclos.map(c => c.codCiclo).join(' | ')
-                    }
+                    ciclos={user.ciclos}
                     sobre_mi={user.sobre_mi}
                 />
             );

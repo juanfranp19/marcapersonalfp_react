@@ -22,11 +22,11 @@ body {
         font-weight: bold;
     }
 
-    p {
+    div, p {
         font-size: 12px;
     }
 
-    span {
+    .negrita {
         font-weight: bold;
     }
 
@@ -51,8 +51,10 @@ body {
         .bandera {
             font-size: 20px;
         }
-        .certificado {
-            text-align: left;
-        }
     }
+}
+
+// para que ningún otro elemento tape el tooltip
+.react-tooltip {
+    z-index: 9999;
 }
