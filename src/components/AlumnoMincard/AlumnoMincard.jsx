@@ -124,7 +124,7 @@ const AlumnoMincard = (props) => {
 
                     <div className="col-6 col-sm-12 col-md-6 col-lg-12 col-xxl-6">
 
-                        <h1>{props.name}</h1>
+                        <h1>{props.nombre} {props.apellidos}</h1>
 
                         {tablaIdiomas()}
 

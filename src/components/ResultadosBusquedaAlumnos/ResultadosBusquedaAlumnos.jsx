@@ -13,7 +13,8 @@ const ResultadosBusquedaAlumnos = () => {
                 <AlumnoMincard
                     key={user.id}
                     imagen={user.imagen}
-                    name={user.name}
+                    nombre={user.nombre}
+                    apellidos={user.apellidos}
                     idiomas={user.idiomas}
                     ciclos={user.ciclos}
                     sobre_mi={user.sobre_mi}
