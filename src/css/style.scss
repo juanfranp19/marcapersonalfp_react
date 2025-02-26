@@ -58,3 +58,8 @@ body {
 .react-tooltip {
     z-index: 9999;
 }
+
+// para que desaparezca el scroll horizontal que genera el infinite scroll
+.infinite-scroll-component {
+    overflow: hidden !important;
+}

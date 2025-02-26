@@ -5,21 +5,27 @@ import useCount from '../hooks/useCount';
 // servicios
 import getUsers from '../services/getUsers';
 
+const INITIAL_PAGE = 0;
+
 const useUsers = () => {
 
     const [users, setUsers] = useState([]);
-    const countUsers = useCount('users');
+    
+    const [cargando, setCargando] = useState(false);
+
+    const [page, setPage] = useState(INITIAL_PAGE);
 
     function obtenerUsers() {
-        getUsers(countUsers)
+        setCargando(true);
+        getUsers({page: page})
             .then(datos => {
                 setUsers(datos);
             });
     }
 
-    useEffect(obtenerUsers, []);
+    useEffect(obtenerUsers, [setUsers, page]);
 
-    return users;
+    return {cargando, users, setPage};
 }
 
 export default useUsers;

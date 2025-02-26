@@ -1,3 +1,5 @@
+// librerías
+import InfiniteScroll from 'react-infinite-scroll-component';
 // hooks
 import useUsers from '../../hooks/useUsers';
 // componentes
@@ -5,7 +7,11 @@ import AlumnoMincard from '../AlumnoMincard/AlumnoMincard';
 
 const ResultadosBusquedaAlumnos = () => {
 
-    const users = useUsers();
+    const {cargando, users, setPage} = useUsers();
+
+    function obtenerNextPage() {
+        setPage(prevPage => prevPage + 1);
+    }
 
     function obtenerMiniCardAlumnos() {
         return users.map(user => {
@@ -23,12 +29,22 @@ const ResultadosBusquedaAlumnos = () => {
         });
     }
 
-    return (
-        <div className='row justify-content-center'>
-            {obtenerMiniCardAlumnos()}
-        </div>
-    );
+    
 
+    return (
+        <>
+            <InfiniteScroll
+                dataLength={users.length}
+                next={obtenerNextPage}
+                hasMore={true}
+                loader={<h4>Cargando...</h4>}
+            >
+                <div className='row justify-content-center'>
+                    {obtenerMiniCardAlumnos()}
+                </div>
+            </InfiniteScroll>
+        </>
+    );
 }
 
 export default ResultadosBusquedaAlumnos;
