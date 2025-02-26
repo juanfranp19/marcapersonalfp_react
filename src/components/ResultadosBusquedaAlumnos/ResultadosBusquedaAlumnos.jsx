@@ -7,7 +7,7 @@ import AlumnoMincard from '../AlumnoMincard/AlumnoMincard';
 
 const ResultadosBusquedaAlumnos = () => {
 
-    const {cargando, users, setPage} = useUsers();
+    const { cargando, users, setPage } = useUsers();
 
     function obtenerNextPage() {
         setPage(prevPage => prevPage + 1);
@@ -16,20 +16,20 @@ const ResultadosBusquedaAlumnos = () => {
     function obtenerMiniCardAlumnos() {
         return users.map(user => {
             return (
-                <AlumnoMincard
-                    key={user.id}
-                    imagen={user.imagen}
-                    nombre={user.nombre}
-                    apellidos={user.apellidos}
-                    idiomas={user.idiomas}
-                    ciclos={user.ciclos}
-                    sobre_mi={user.sobre_mi}
-                />
+                cargando
+                    ? <p>Cargando...</p>
+                    : <AlumnoMincard
+                        key={user.id}
+                        imagen={user.imagen}
+                        nombre={user.nombre}
+                        apellidos={user.apellidos}
+                        idiomas={user.idiomas}
+                        ciclos={user.ciclos}
+                        sobre_mi={user.sobre_mi}
+                    ></AlumnoMincard>
             );
         });
     }
-
-    
 
     return (
         <>
@@ -37,7 +37,6 @@ const ResultadosBusquedaAlumnos = () => {
                 dataLength={users.length}
                 next={obtenerNextPage}
                 hasMore={true}
-                loader={<h4>Cargando...</h4>}
             >
                 <div className='row justify-content-center'>
                     {obtenerMiniCardAlumnos()}

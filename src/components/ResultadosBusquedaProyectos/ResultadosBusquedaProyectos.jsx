@@ -1,48 +1,52 @@
 // librerías
-import { useEffect, useState } from 'react';
-// servicios
-import getProyectos from '../../services/getProyectos';
+import InfiniteScroll from 'react-infinite-scroll-component';
+// hooks
+import useProyectos from '../../hooks/useProyectos';
 // componentes
 import ProyectoMinCard from '../ProyectoMincard/ProyectoMincard';
 
 const ResultadosBusquedaProyectos = () => {
 
-    const [proyectos, setProyectos] = useState([]);
+    const { cargando, proyectos, setPage } = useProyectos();
 
-    function obtenerProyectos() {
-        getProyectos()
-            .then(data => {
-                setProyectos(data);
-            });
+    function obtenerNextPage() {
+        setPage(prevPage => prevPage + 1);
     }
 
     function obtenerMiniCardProyectos() {
         return proyectos.map(proyecto => {
             return (
-                <ProyectoMinCard
-                    key={proyecto.id}
-                    imagen={proyecto.imagen}
-                    nombre={proyecto.nombre}
-                    alumnos={proyecto.participantes.map(p => p.nombre).join(', ')}
-                    tutor={proyecto.docente_id}
-                    ciclos={
-                        proyecto.ciclos.length < 1
-                        ? 'No hay ciclos'
-                        : proyecto.ciclos.map(c => c.codCiclo).join(' | ')
-                    }
-                />
+                cargando 
+                    ? <p>Cargando...</p>
+                    : <ProyectoMinCard
+                        key={proyecto.id}
+                        imagen={proyecto.imagen}
+                        nombre={proyecto.nombre}
+                        alumnos={proyecto.participantes.map(p => p.nombre).join(', ')}
+                        tutor={proyecto.docente_id}
+                        ciclos={
+                            proyecto.ciclos.length < 1
+                                ? 'No hay ciclos'
+                                : proyecto.ciclos.map(c => c.codCiclo).join(' | ')
+                        }
+                    ></ProyectoMinCard>
             );
         });
     }
 
-    useEffect(obtenerProyectos, []);
-
     return (
-        <div className='row justify-content-center'>
-            {obtenerMiniCardProyectos()}
-        </div>
+        <>
+            <InfiniteScroll
+                dataLength={proyectos.length}
+                next={obtenerNextPage}
+                hasMore={true}
+            >
+                <div className='row justify-content-center'>
+                    {obtenerMiniCardProyectos()}
+                </div>
+            </InfiniteScroll>
+        </>
     );
-
 }
 
 export default ResultadosBusquedaProyectos;
