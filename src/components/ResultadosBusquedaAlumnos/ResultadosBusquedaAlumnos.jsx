@@ -32,17 +32,17 @@ const ResultadosBusquedaAlumnos = () => {
     }
 
     return (
-        <>
+        <div className='row'>
             <InfiniteScroll
                 dataLength={users.length}
                 next={obtenerNextPage}
                 hasMore={true}
             >
-                <div className='row justify-content-center'>
+                <div className='row justify-content-center resultados-busqueda'>
                     {obtenerMiniCardAlumnos()}
                 </div>
             </InfiniteScroll>
-        </>
+        </div>
     );
 }
 

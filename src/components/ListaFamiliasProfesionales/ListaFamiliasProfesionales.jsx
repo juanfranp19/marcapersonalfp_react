@@ -16,9 +16,12 @@ const ListaFamiliasProfesionales = () => {
     }
 
     return (
-        <>
-            {listaFamilias.map(obtenerBotonesFamilias)}
-        </>
+        <div className='row lista-filtrado-botones'>
+            <div className="col-12">
+                <h1>Filtra por familia profesional</h1>
+                {listaFamilias.map(obtenerBotonesFamilias)}
+            </div>
+        </div>
     );
 
 }

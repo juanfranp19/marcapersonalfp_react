@@ -41,7 +41,7 @@ const ResultadosBusquedaProyectos = () => {
                 next={obtenerNextPage}
                 hasMore={true}
             >
-                <div className='row justify-content-center'>
+                <div className='row justify-content-center resultados-busqueda'>
                     {obtenerMiniCardProyectos()}
                 </div>
             </InfiniteScroll>

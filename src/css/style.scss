@@ -63,3 +63,20 @@ body {
 .infinite-scroll-component {
     overflow: hidden !important;
 }
+
+.lista-filtrado-botones {
+    background-color: $fondo-filtrado;
+    padding: 10px 15px;
+    margin: 1;
+
+    h1 {
+        color: $color-filtrado;
+        font-size: 17px;
+        font-weight: bold;
+        padding: 5px 0;
+    }
+}
+
+.resultados-busqueda {
+    padding: 50px 0;
+}

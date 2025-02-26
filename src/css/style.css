@@ -324,4 +324,20 @@ body {
 
 .infinite-scroll-component {
   overflow: hidden !important;
+}
+
+.lista-filtrado-botones {
+  background-color: #77878d;
+  padding: 10px 15px;
+  margin: 1;
+}
+.lista-filtrado-botones h1 {
+  color: #f1f1e6;
+  font-size: 17px;
+  font-weight: bold;
+  padding: 5px 0;
+}
+
+.resultados-busqueda {
+  padding: 50px 0;
 }/*# sourceMappingURL=style.css.map */

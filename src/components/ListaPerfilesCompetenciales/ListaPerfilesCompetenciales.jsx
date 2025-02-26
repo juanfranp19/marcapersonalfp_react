@@ -14,9 +14,12 @@ const ListaPerfilesCompetenciales = () => {
     }
     
     return (
-        <>
-            {listaCompetencias.map(obtenerBotonesCompetencias)}
-        </>
+        <div className='row lista-filtrado-botones'>
+            <div className="col-12">
+                <h1>Filtra por perfil competencial</h1>
+                {listaCompetencias.map(obtenerBotonesCompetencias)}
+            </div>
+        </div>
     );
 }
 
