@@ -1,5 +1,4 @@
-
-const BotonFamiliaProfesional = (props) => {
+const BotonFiltrador = (props) => {
 
     return (
         <div className="customCheckBoxHolder">
@@ -13,4 +12,4 @@ const BotonFamiliaProfesional = (props) => {
     );
 }
 
-export default BotonFamiliaProfesional;
+export default BotonFiltrador;
