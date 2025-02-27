@@ -5,7 +5,7 @@ import useProyectos from '../../hooks/useProyectos';
 // componentes
 import ProyectoMinCard from '../ProyectoMincard/ProyectoMincard';
 
-const ResultadosBusquedaProyectos = () => {
+const ResultadosBusquedaProyectos = (props) => {
 
     const { cargando, proyectos, setPage } = useProyectos();
 
@@ -15,9 +15,22 @@ const ResultadosBusquedaProyectos = () => {
 
     function obtenerMiniCardProyectos() {
         return proyectos.map(proyecto => {
+
+            let aparece = false;
+
+            proyecto.ciclos.some(c => {
+                props.familiasFiltradas.some(familia => {
+                    if (c.codFamilia === familia.codigo) aparece = true;
+                });
+            });
+
+            if (props.familiasFiltradas.length < 1) aparece = true;
+
+            if (!aparece) return null;
+
             return (
                 cargando 
-                    ? <p>Cargando...</p>
+                    ? <p key={proyecto.id}>Cargando...</p>
                     : <ProyectoMinCard
                         key={proyecto.id}
                         imagen={proyecto.imagen}

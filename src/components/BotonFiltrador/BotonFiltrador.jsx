@@ -2,7 +2,7 @@ const BotonFiltrador = (props) => {
 
     return (
         <div className="customCheckBoxHolder">
-            <input type="checkbox" id={props.id} className="customCheckBoxInput" />
+            <input onChange={props.onChange} type="checkbox" id={props.id} className="customCheckBoxInput" />
             <label htmlFor={props.id} className="customCheckBoxWrapper">
                 <div className="customCheckBox">
                     <div className="inner">{props.nombre}</div>

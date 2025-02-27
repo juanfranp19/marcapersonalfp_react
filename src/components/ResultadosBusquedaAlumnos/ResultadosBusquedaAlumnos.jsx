@@ -5,7 +5,7 @@ import useUsers from '../../hooks/useUsers';
 // componentes
 import AlumnoMincard from '../AlumnoMincard/AlumnoMincard';
 
-const ResultadosBusquedaAlumnos = () => {
+const ResultadosBusquedaAlumnos = (props) => {
 
     const { cargando, users, setPage } = useUsers();
 
@@ -14,10 +14,32 @@ const ResultadosBusquedaAlumnos = () => {
     }
 
     function obtenerMiniCardAlumnos() {
+
         return users.map(user => {
+
+            let apareceCompetencia = false;
+            let apareceFamilia = false;
+
+            user.competencias.some((competencia) => {
+                props.competenciasFiltradas.some((competenciaFiltrada) => {
+                    if (competencia.nombre === competenciaFiltrada.nombre) apareceCompetencia = true;
+                })
+            });
+
+            user.ciclos.some((ciclo) => {
+                props.familiasFiltradas.some((familiaFiltrada) => {
+                    if (ciclo.codFamilia === familiaFiltrada.codigo) apareceFamilia = true;
+                })
+            });
+
+            if (props.competenciasFiltradas.lenght < 1) apareceCompetencia = true;
+            if (props.familiasFiltradas.length < 1) apareceFamilia = true;
+
+            if (!apareceCompetencia && !apareceFamilia) return null;
+
             return (
                 cargando
-                    ? <p>Cargando...</p>
+                    ? <p key={user.id}>Cargando...</p>
                     : <AlumnoMincard
                         key={user.id}
                         imagen={user.imagen}
