@@ -20,22 +20,29 @@ const ResultadosBusquedaAlumnos = (props) => {
             let apareceCompetencia = false;
             let apareceFamilia = false;
 
-            user.competencias.some((competencia) => {
-                props.competenciasFiltradas.some((competenciaFiltrada) => {
-                    if (competencia.nombre === competenciaFiltrada.nombre) apareceCompetencia = true;
-                })
-            });
+            if (props.competenciasFiltradas.length > 0) {
+                user.competencias.some((competencia) => {
+                    props.competenciasFiltradas.some((competenciaFiltrada) => {
 
-            user.ciclos.some((ciclo) => {
-                props.familiasFiltradas.some((familiaFiltrada) => {
-                    if (ciclo.codFamilia === familiaFiltrada.codigo) apareceFamilia = true;
-                })
-            });
+                        if (competencia.id === competenciaFiltrada.id) apareceCompetencia = true;
+                    })
+                });
+            } else {
+                apareceCompetencia = true;
+            }
 
-            if (props.competenciasFiltradas.lenght < 1) apareceCompetencia = true;
-            if (props.familiasFiltradas.length < 1) apareceFamilia = true;
+            if (props.familiasFiltradas.length > 0) {
+                user.ciclos.some((ciclo) => {
+                    props.familiasFiltradas.some((familiaFiltrada) => {
 
-            if (!apareceCompetencia && !apareceFamilia) return null;
+                        if (ciclo.codFamilia === familiaFiltrada.codigo) apareceFamilia = true;
+                    })
+                });
+            } else {
+                apareceFamilia = true;
+            }
+
+            if (!apareceCompetencia || !apareceFamilia) return null;
 
             return (
                 cargando

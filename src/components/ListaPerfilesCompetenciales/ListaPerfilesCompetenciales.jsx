@@ -1,24 +1,23 @@
+// librerías
+import { useEffect, useState } from 'react';
 // componentes
 import BotonFiltrador from '../BotonFiltrador/BotonFiltrador';
 // hooks
 import useCompetencias from '../../hooks/useCompetencias';
-import { useEffect, useState } from 'react';
 
 const ListaPerfilesCompetenciales = (props) => {
 
     const listaCompetencias = useCompetencias();
-
-    const [competenciasSeleccionadas, setCompetenciasSeleccionadas] = useState({});
     const [competenciasFiltradas, setCompetenciasFiltradas] = useState([]);
     
     function handleCompetencias(e) {
-        setCompetenciasSeleccionadas({ ...competenciasSeleccionadas, [e.target.nombre]: e.target.checked });
 
         if (e.target.checked) {
-            const resultadoCompetencias = listaCompetencias.filter((competencia) => competencia.nombre === e.target.nombre);
+            const resultadoCompetencias = listaCompetencias.filter((competencia) => +competencia.id === +e.target.id);
+            
             setCompetenciasFiltradas([...competenciasFiltradas, ...resultadoCompetencias]);
         } else {
-            const resultadoCompetencias = listaCompetencias.filter((competencia) => competencia.nombre !== e.target.nombre);
+            const resultadoCompetencias = competenciasFiltradas.filter((competencia) => +competencia.id !== +e.target.id);
             setCompetenciasFiltradas([...resultadoCompetencias]);
         }
     }
@@ -32,8 +31,6 @@ const ListaPerfilesCompetenciales = (props) => {
             <BotonFiltrador key={competencia.id} id={competencia.id} nombre={competencia.nombre} onChange={handleCompetencias}></BotonFiltrador>
         );
     }
-
-    
 
     useEffect(mandarCompetenciasFiltradas, [competenciasFiltradas]);
     

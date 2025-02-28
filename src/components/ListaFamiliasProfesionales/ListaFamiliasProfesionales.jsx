@@ -8,12 +8,9 @@ import useFamiliasProfesionales from '../../hooks/useFamiliasProfesionales';
 const ListaFamiliasProfesionales = (props) => {
 
     const listaFamilias = useFamiliasProfesionales();
-
-    const [familiasSeleccionadas, setFamiliasSeleccionadas] = useState({});
     const [familiasFiltradas, setFamiliasFiltradas] = useState([]);
 
     function handleFamilias(e) {
-        setFamiliasSeleccionadas({ ...familiasSeleccionadas, [e.target.id]: e.target.checked });
 
         if (e.target.checked) {
             const resultadoFamilias = listaFamilias.filter((familia) => familia.codigo === e.target.id);

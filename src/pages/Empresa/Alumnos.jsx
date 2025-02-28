@@ -18,8 +18,8 @@ const Alumnos = () => {
         if (Array.isArray(competencias)) setCompetenciasFiltradas(competencias);
     }
 
-    console.log(familiasFiltradas);
-    console.log(competenciasFiltradas);
+    console.log('familias filtradas', familiasFiltradas);
+    console.log('competencias filtradas', competenciasFiltradas);
 
     return (
         <div className="row">
