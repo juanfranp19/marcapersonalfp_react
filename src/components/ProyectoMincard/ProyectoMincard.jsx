@@ -1,5 +1,6 @@
 // librerías
 import { useEffect, useState } from 'react';
+import { Tooltip } from 'react-tooltip';
 // imagenes
 import imagenProyectoDefecto from '../../assets/images/proyecto.svg';
 
@@ -9,6 +10,25 @@ const ProyectoMinCard = (props) => {
 
     function obtenerImagenProyecto() {
         if(!props.imagen) setImagenProyecto(imagenProyectoDefecto);
+    }
+
+    function ciclos() {
+        return (
+            props.ciclos.length < 1
+                ? 'No hay ciclos'
+                : props.ciclos.map((c, key) => {
+
+                    return (
+                        <span
+                            key={`ciclo-${key}`}
+                            data-tooltip-id={c.codCiclo}
+                        >
+                            {c.codCiclo} |
+                            <Tooltip id={c.codCiclo} content={c.nombre} />
+                        </span>
+                    );
+                })
+        );
     }
 
     useEffect(obtenerImagenProyecto, []);
@@ -31,7 +51,7 @@ const ProyectoMinCard = (props) => {
                         <p>{props.alumnos}</p>
 
                         <p><span>Tutor:</span> {props.tutor}</p>
-                        <p><span>Ciclos:</span> {props.ciclos}</p>
+                        <div><span>Ciclos:</span> {ciclos()}</div>
 
                     </div>
 
