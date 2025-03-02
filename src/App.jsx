@@ -5,7 +5,7 @@ import { Route, Routes } from 'react-router-dom';
 import Cabecera from './components/Cabecera/Cabecera';
 // páginas
 import Home from './pages/Home';
-import Empresa from './pages/Empresa/Empresa';
+import Empresa from './pages/Empresa'; 
 import CentroEducativo from './pages/CentroEducativo';
 import Alumno from './pages/Alumno';
 // contextos

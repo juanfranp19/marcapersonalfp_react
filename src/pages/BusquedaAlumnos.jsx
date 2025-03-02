@@ -1,9 +1,9 @@
 // librerías
 import React, { useState } from 'react';
 // componentes
-import ListaPerfilesCompetenciales from '../../components/ListaPerfilesCompetenciales/ListaPerfilesCompetenciales';
-import ListaFamiliasProfesionales from '../../components/ListaFamiliasProfesionales/ListaFamiliasProfesionales';
-import ResultadosBusquedaAlumnos from '../../components/ResultadosBusquedaAlumnos/ResultadosBusquedaAlumnos';
+import ListaPerfilesCompetenciales from '../components/ListaPerfilesCompetenciales/ListaPerfilesCompetenciales';
+import ListaFamiliasProfesionales from '../components/ListaFamiliasProfesionales/ListaFamiliasProfesionales';
+import ResultadosBusquedaAlumnos from '../components/ResultadosBusquedaAlumnos/ResultadosBusquedaAlumnos';
 
 const Alumnos = () => {
 

@@ -1,8 +1,8 @@
 // librerías
 import React, { useState } from 'react';
 // componentes
-import ListaFamiliasProfesionales from '../../components/ListaFamiliasProfesionales/ListaFamiliasProfesionales';
-import ResultadosBusquedaProyectos from '../../components/ResultadosBusquedaProyectos/ResultadosBusquedaProyectos';
+import ListaFamiliasProfesionales from '../components/ListaFamiliasProfesionales/ListaFamiliasProfesionales';
+import ResultadosBusquedaProyectos from '../components/ResultadosBusquedaProyectos/ResultadosBusquedaProyectos';
 
 const Proyectos = () => {
 

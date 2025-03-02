@@ -1,10 +1,10 @@
 // librerías
 import React from 'react';
 // componentes
-import MenuEmpresa from '../../components/MenuEmpresa/MenuEmpresa';
+import MenuEmpresa from '../components/MenuEmpresa/MenuEmpresa';
 import { Route, Routes } from 'react-router-dom';
-import Proyectos from './Proyectos';
-import Alumnos from './Alumnos';
+import BusquedaProyectos from './BusquedaProyectos';
+import BusquedaAlumnos from './BusquedaAlumnos';
 
 const Empresa = () => {
     return (
@@ -13,8 +13,8 @@ const Empresa = () => {
                 <MenuEmpresa></MenuEmpresa>
 
                 <Routes>
-                    <Route path='proyectos' element={<Proyectos></Proyectos>}></Route>
-                    <Route path='alumnos' element={<Alumnos></Alumnos>}></Route>
+                    <Route path='proyectos' element={<BusquedaProyectos></BusquedaProyectos>}></Route>
+                    <Route path='alumnos' element={<BusquedaAlumnos></BusquedaAlumnos>}></Route>
                 </Routes>
             </div>
         </div>

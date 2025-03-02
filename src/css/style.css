@@ -111,7 +111,7 @@
   color: #5f4162;
   text-decoration: none;
 }
-.menu-empresa a {
+.menu-empresa a, .menu-empresa div, .menu-empresa div:hover {
   color: #f1f1e6;
   text-decoration: none;
 }
