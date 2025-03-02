@@ -4,6 +4,7 @@ import InfiniteScroll from 'react-infinite-scroll-component';
 import useProyectos from '../../hooks/useProyectos';
 // componentes
 import ProyectoMinCard from '../ProyectoMincard/ProyectoMincard';
+import AjaxLoader from '../AjaxLoader/AjaxLoader';
 
 const ResultadosBusquedaProyectos = (props) => {
 
@@ -29,9 +30,7 @@ const ResultadosBusquedaProyectos = (props) => {
             if (!aparece) return null;
 
             return (
-                cargando 
-                    ? <p key={proyecto.id}>Cargando...</p>
-                    : <ProyectoMinCard
+                <ProyectoMinCard
                         key={proyecto.id}
                         imagen={proyecto.imagen}
                         nombre={proyecto.nombre}
@@ -49,9 +48,12 @@ const ResultadosBusquedaProyectos = (props) => {
                 dataLength={proyectos.length}
                 next={obtenerNextPage}
                 hasMore={true}
+                loader={<AjaxLoader></AjaxLoader>}
             >
                 <div className='row justify-content-center resultados-busqueda'>
+                
                     {obtenerMiniCardProyectos()}
+                
                 </div>
             </InfiniteScroll>
         </>
