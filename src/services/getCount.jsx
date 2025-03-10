@@ -8,6 +8,7 @@ const getCount = (tabla) => {
         })
         .catch(error => {
             console.error('Error: ', error);
+            return 0;
         });
 }
 

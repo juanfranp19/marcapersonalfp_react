@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import ListaPerfilesCompetenciales from '../components/ListaPerfilesCompetenciales/ListaPerfilesCompetenciales';
 import ListaFamiliasProfesionales from '../components/ListaFamiliasProfesionales/ListaFamiliasProfesionales';
 import ResultadosBusquedaAlumnos from '../components/ResultadosBusquedaAlumnos/ResultadosBusquedaAlumnos';
+import MenuEmpresa from '../components/MenuEmpresa/MenuEmpresa';
 
 const Alumnos = () => {
 
@@ -22,13 +23,17 @@ const Alumnos = () => {
     console.log('competencias filtradas', competenciasFiltradas);
 
     return (
-        <div className="row">
-            <div className="col-12">
-                <ListaPerfilesCompetenciales competenciasFiltradas={manejarCompetenciasFiltradas}></ListaPerfilesCompetenciales>
-                <ListaFamiliasProfesionales familiasFiltradas={manejarFamiliasFiltradas}></ListaFamiliasProfesionales>
-                <ResultadosBusquedaAlumnos competenciasFiltradas={competenciasFiltradas} familiasFiltradas={familiasFiltradas}></ResultadosBusquedaAlumnos>
+        <>
+            <MenuEmpresa></MenuEmpresa>
+            
+            <div className="row">
+                <div className="col-12">
+                    <ListaPerfilesCompetenciales competenciasFiltradas={manejarCompetenciasFiltradas}></ListaPerfilesCompetenciales>
+                    <ListaFamiliasProfesionales familiasFiltradas={manejarFamiliasFiltradas}></ListaFamiliasProfesionales>
+                    <ResultadosBusquedaAlumnos competenciasFiltradas={competenciasFiltradas} familiasFiltradas={familiasFiltradas}></ResultadosBusquedaAlumnos>
+                </div>
             </div>
-        </div>
+        </>
     );
 }
 

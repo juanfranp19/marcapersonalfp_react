@@ -8,6 +8,7 @@ const getProyectos = ({ limite=10, page=0 }) => {
         })
         .catch(error => {
             console.error('Error: ', error);
+            return 0;
         });
 }
 

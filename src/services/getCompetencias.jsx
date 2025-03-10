@@ -8,6 +8,7 @@ const getCompetencias = () => {
         })
         .catch(error => {
             console.error('Error: ', error);
+            return 0;
         });
 }
 

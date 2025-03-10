@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 // componentes
 import ListaFamiliasProfesionales from '../components/ListaFamiliasProfesionales/ListaFamiliasProfesionales';
 import ResultadosBusquedaProyectos from '../components/ResultadosBusquedaProyectos/ResultadosBusquedaProyectos';
+import MenuEmpresa from '../components/MenuEmpresa/MenuEmpresa';
 
 const Proyectos = () => {
 
@@ -15,12 +16,16 @@ const Proyectos = () => {
     console.log(familiasFiltradas);
 
     return (
-        <div className="row">
-            <div className="col-12">
-                <ListaFamiliasProfesionales familiasFiltradas={manejarFamiliasFiltradas}></ListaFamiliasProfesionales>
-                <ResultadosBusquedaProyectos familiasFiltradas={familiasFiltradas}></ResultadosBusquedaProyectos>
+        <>
+            <MenuEmpresa></MenuEmpresa>
+
+            <div className="row">
+                <div className="col-12">
+                    <ListaFamiliasProfesionales familiasFiltradas={manejarFamiliasFiltradas}></ListaFamiliasProfesionales>
+                    <ResultadosBusquedaProyectos familiasFiltradas={familiasFiltradas}></ResultadosBusquedaProyectos>
+                </div>
             </div>
-        </div>
+        </>
     );
 }
 
