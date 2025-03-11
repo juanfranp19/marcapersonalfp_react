@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
 .ajax-loader {
+  text-align: center;
+  margin: 0 0 50px 0;
+}
+.ajax-loader .ajax-loader-img {
   width: 100px;
 }
 
