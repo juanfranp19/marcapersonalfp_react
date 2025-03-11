@@ -1,5 +1,5 @@
 // librerías
-import React, { useState } from 'react';
+import { useState } from 'react';
 // componentes
 import ListaFamiliasProfesionales from '../components/ListaFamiliasProfesionales/ListaFamiliasProfesionales';
 import ResultadosBusquedaProyectos from '../components/ResultadosBusquedaProyectos/ResultadosBusquedaProyectos';
@@ -19,8 +19,8 @@ const Proyectos = () => {
         <>
             <MenuEmpresa></MenuEmpresa>
 
-            <div className="row">
-                <div className="col-12">
+            <div className='row'>
+                <div className='col-12'>
                     <ListaFamiliasProfesionales familiasFiltradas={manejarFamiliasFiltradas}></ListaFamiliasProfesionales>
                     <ResultadosBusquedaProyectos familiasFiltradas={familiasFiltradas}></ResultadosBusquedaProyectos>
                 </div>

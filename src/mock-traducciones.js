@@ -3,24 +3,24 @@ const traducciones = {
         menuHome: {
             empresa: 'Empresas',
             centro: 'Centro educativo',
-            alumnos: 'Alumnos'
+            alumnos: 'Alumnos',
         },
         menuEmpresa: {
             empresa: 'Empresas',
             proyectos: 'Proyectos',
-            alumnos: 'Alumnos'
+            alumnos: 'Alumnos',
         },
         contador: {
             empresa: 'Empresas',
             proyectos: 'Proyectos',
-            alumnos: 'Alumnos'
+            alumnos: 'Alumnos',
         },
         footer: {
-            ciclo: 'Diseño Web CFGS Desarrollo de Aplicaciones Web'
+            ciclo: 'Diseño Web CFGS Desarrollo de Aplicaciones Web',
         },
         empresa_filtros: {
             familias_profesionales: 'Filtra por familia profesional',
-            competencias: 'Filtra por perfil competencial'
+            competencias: 'Filtra por perfil competencial',
         },
         alumno_mincard: {
             certificado: 'certificado',
@@ -28,36 +28,36 @@ const traducciones = {
             c: 'C',
             sc: 'SC',
             perfiles: 'Perfiles',
-            ciclos: 'Ciclos'
+            ciclos: 'Ciclos',
         },
         proyecto_mincard: {
             alumnos: 'ALUMNOS',
             tutor: 'Tutor',
             ciclos: 'Ciclos',
-        }
+        },
     },
     en: {
         menuHome: {
             empresa: 'Companies',
             centro: 'School',
-            alumnos: 'Students'
+            alumnos: 'Students',
         },
         menuEmpresa: {
             empresa: 'Companies',
             proyectos: 'Projects',
-            alumnos: 'Students'
+            alumnos: 'Students',
         },
         contador: {
             empresa: 'Companies',
             proyectos: 'Projects',
-            alumnos: 'Students'
+            alumnos: 'Students',
         },
         footer: {
-            ciclo: 'Web Design CFGS Web Application Development'
+            ciclo: 'Web Design CFGS Web Application Development',
         },
         empresa_filtros: {
             familias_profesionales: 'Filter by professional family',
-            competencias: 'Filter by competency profile'
+            competencias: 'Filter by competency profile',
         },
         alumno_mincard: {
             certificado: 'certified',
@@ -65,14 +65,14 @@ const traducciones = {
             c: 'C',
             sc: 'UC',
             perfiles: 'Profiles',
-            ciclos: 'Cycles'
+            ciclos: 'Cycles',
         },
         proyecto_mincard: {
             alumnos: 'STUDENTS',
             tutor: 'Tutor',
             ciclos: 'Cycles',
-        }
-    }
+        },
+    },
 }
 
 export default traducciones;

@@ -1,10 +1,10 @@
 // librerías
 import React, { useContext, useEffect, useState } from 'react';
-// hooks
-import useCount from '../../hooks/useCount';
 // contextos
 import TraduccionContext from '../../contexts/TraduccionContext';
-// mock
+// hooks
+import useCount from '../../hooks/useCount';
+// mocks
 import traducciones from '../../mock-traducciones';
 
 const Contador = (props) => {

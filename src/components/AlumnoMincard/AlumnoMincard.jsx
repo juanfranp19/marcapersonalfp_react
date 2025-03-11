@@ -1,13 +1,13 @@
 // librerías
 import { useContext, useEffect, useState } from 'react';
 import { Tooltip } from 'react-tooltip';
+// assets
+import imagenAlumnoDefecto from '../../assets/images/alumno.svg';
+// contextos
+import TraduccionContext from '../../contexts/TraduccionContext';
 // mocks
 import banderas from '../../mock-banderas';
-// imágenes
-import imagenAlumnoDefecto from '../../assets/images/alumno.svg';
-
 import traducciones from '../../mock-traducciones';
-import TraduccionContext from '../../contexts/TraduccionContext';
 
 const AlumnoMincard = (props) => {
 
@@ -117,20 +117,19 @@ const AlumnoMincard = (props) => {
     useEffect(obtenerImagenAlumno, []);
 
     return (
-        
-        <div className="col-12 col-sm-6 col-lg-4 col-xl-3">
-            <div className="card m-2">
+        <div className='col-12 col-sm-6 col-lg-4 col-xl-3'>
+            <div className='card m-2'>
 
-                <div className="row p-4 card-body">
-                    <div className="col-6 col-sm-12 col-md-6 col-lg-12 col-xxl-6">
-                        <img src={imagenAlumno} alt="Proyecto" className="w-100" />
+                <div className='row p-4 card-body'>
+                    <div className='col-6 col-sm-12 col-md-6 col-lg-12 col-xxl-6'>
+                        <img src={imagenAlumno} alt='Proyecto' className='w-100' />
                     </div>
 
-                    <div className="col-6 col-sm-12 col-md-6 col-lg-12 col-xxl-6">
+                    <div className='col-6 col-sm-12 col-md-6 col-lg-12 col-xxl-6'>
 
                         <h1>{props.nombre} {props.apellidos}</h1>
 
-                        <div className="info">
+                        <div className='info'>
                             <div>
                                 {tablaIdiomas()}
                             </div>

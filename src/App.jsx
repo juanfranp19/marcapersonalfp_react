@@ -1,8 +1,10 @@
 // librerías
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 // componentes
 import Cabecera from './components/Cabecera/Cabecera';
+// contextos
+import TraduccionContext from './contexts/TraduccionContext';
 // páginas
 import Home from './pages/Home';
 import Empresa from './pages/Empresa';
@@ -10,8 +12,6 @@ import CentroEducativo from './pages/CentroEducativo';
 import Alumno from './pages/Alumno';
 import BusquedaProyectos from './pages/BusquedaProyectos';
 import BusquedaAlumnos from './pages/BusquedaAlumnos';
-// contextos
-import TraduccionContext from './contexts/TraduccionContext';
 
 function App() {
 
@@ -22,7 +22,6 @@ function App() {
     }
 
     return (
-
         <div className='container-fluid'>
             <TraduccionContext.Provider value={idiomaSeleccionado}>
 

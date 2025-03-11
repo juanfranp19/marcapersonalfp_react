@@ -1,8 +1,9 @@
 // librerías
 import { useEffect, useState } from 'react';
+// hooks
+import useCount from './useCount';
 // servicios
 import getProyectos from '../services/getProyectos';
-import useCount from './useCount';
 
 const INITIAL_PAGE = 0;
 
@@ -32,7 +33,7 @@ const useProyectos = () => {
 
     useEffect(obtenerProyectos, [page]);
 
-    return { cargando, proyectos, setPage, hasMore };
+    return ({ cargando, proyectos, setPage, hasMore });
 }
 
 export default useProyectos;

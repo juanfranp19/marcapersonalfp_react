@@ -1,5 +1,5 @@
 // librerías
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 // componentes
 import Contador from '../Contador/Contador';
 import InfoCarlosIII from '../InfoCarlosIII/InfoCarlosIII';

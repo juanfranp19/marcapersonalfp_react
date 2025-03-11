@@ -1,7 +1,7 @@
 // librerías
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 // servicios
-import getFamiliasProfesionales from "../services/getFamiliasProfesionales";
+import getFamiliasProfesionales from '../services/getFamiliasProfesionales';
 
 const useFamiliasProfesionales = () => {
 

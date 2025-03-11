@@ -1,6 +1,3 @@
-// librerías
-import React from 'react';
-
 const Alumno = () => {
     return (
         <div>

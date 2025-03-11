@@ -1,8 +1,9 @@
 // librerías
 import { useEffect, useState } from 'react';
+// hooks
+import useCount from './useCount';
 // servicios
 import getUsers from '../services/getUsers';
-import useCount from './useCount';
 
 const INITIAL_PAGE = 0;
 
@@ -30,7 +31,7 @@ const useUsers = () => {
 
     useEffect(obtenerUsers, [page]);
 
-    return { cargando, users, setPage, hasMore };
+    return ({ cargando, users, setPage, hasMore });
 }
 
 export default useUsers;

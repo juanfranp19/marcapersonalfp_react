@@ -4,11 +4,12 @@ import { useContext, useEffect, useState } from 'react';
 import BotonFiltrador from '../BotonFiltrador/BotonFiltrador';
 import CheckboxDesplegable from '../CheckboxDesplegable/CheckboxDesplegable';
 import AjaxLoader from '../AjaxLoader/AjaxLoader';
+// contextos
+import TraduccionContext from '../../contexts/TraduccionContext';
 // hooks
 import useCompetencias from '../../hooks/useCompetencias';
-
+// mocks
 import traducciones from '../../mock-traducciones';
-import TraduccionContext from '../../contexts/TraduccionContext';
 
 const ListaPerfilesCompetenciales = (props) => {
 
@@ -48,7 +49,7 @@ const ListaPerfilesCompetenciales = (props) => {
     
     return (
         <div className='row lista-filtrado-botones'>
-            <div className="col-12">
+            <div className='col-12'>
                 <h1>{traducciones[idioma].empresa_filtros.competencias} <CheckboxDesplegable isChecked={isChecked}></CheckboxDesplegable></h1>
                 {
                     cargando

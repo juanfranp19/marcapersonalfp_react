@@ -1,11 +1,10 @@
 // librerías
 import InfiniteScroll from 'react-infinite-scroll-component';
+// componentes
+import AjaxLoader from '../AjaxLoader/AjaxLoader';
+import AlumnoMincard from '../AlumnoMincard/AlumnoMincard';
 // hooks
 import useUsers from '../../hooks/useUsers';
-// componentes
-import AlumnoMincard from '../AlumnoMincard/AlumnoMincard';
-import AjaxLoader from '../AjaxLoader/AjaxLoader';
-import { useEffect } from 'react';
 
 const ResultadosBusquedaAlumnos = (props) => {
 

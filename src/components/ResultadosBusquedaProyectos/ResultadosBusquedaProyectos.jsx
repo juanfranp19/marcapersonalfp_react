@@ -1,10 +1,10 @@
 // librerías
 import InfiniteScroll from 'react-infinite-scroll-component';
-// hooks
-import useProyectos from '../../hooks/useProyectos';
 // componentes
 import ProyectoMinCard from '../ProyectoMincard/ProyectoMincard';
 import AjaxLoader from '../AjaxLoader/AjaxLoader';
+// hooks
+import useProyectos from '../../hooks/useProyectos';
 
 const ResultadosBusquedaProyectos = (props) => {
 
