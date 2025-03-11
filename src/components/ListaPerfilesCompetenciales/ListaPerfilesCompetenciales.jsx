@@ -2,18 +2,21 @@
 import { useEffect, useState } from 'react';
 // componentes
 import BotonFiltrador from '../BotonFiltrador/BotonFiltrador';
+import CheckboxDesplegable from '../CheckboxDesplegable/CheckboxDesplegable';
+import AjaxLoader from '../AjaxLoader/AjaxLoader';
 // hooks
 import useCompetencias from '../../hooks/useCompetencias';
 
 const ListaPerfilesCompetenciales = (props) => {
 
-    const listaCompetencias = useCompetencias();
+    const { competencias, cargando } = useCompetencias();
     const [competenciasFiltradas, setCompetenciasFiltradas] = useState([]);
+    const [checked, setChecked] = useState(false);
     
     function handleCompetencias(e) {
 
         if (e.target.checked) {
-            const resultadoCompetencias = listaCompetencias.filter((competencia) => +competencia.id === +e.target.id);
+            const resultadoCompetencias = competencias.filter((competencia) => +competencia.id === +e.target.id);
             
             setCompetenciasFiltradas([...competenciasFiltradas, ...resultadoCompetencias]);
         } else {
@@ -27,9 +30,14 @@ const ListaPerfilesCompetenciales = (props) => {
     }
 
     function obtenerBotonesCompetencias(competencia) {
-        return (
+
+        if (checked) return (
             <BotonFiltrador key={competencia.id} id={competencia.id} nombre={competencia.nombre} onChange={handleCompetencias}></BotonFiltrador>
         );
+    }
+
+    function isChecked() {
+        setChecked(!checked);
     }
 
     useEffect(mandarCompetenciasFiltradas, [competenciasFiltradas]);
@@ -37,8 +45,12 @@ const ListaPerfilesCompetenciales = (props) => {
     return (
         <div className='row lista-filtrado-botones'>
             <div className="col-12">
-                <h1>Filtra por perfil competencial</h1>
-                {listaCompetencias.map(obtenerBotonesCompetencias)}
+                <h1>Filtra por perfil competencial <CheckboxDesplegable isChecked={isChecked}></CheckboxDesplegable></h1>
+                {
+                    cargando
+                        ? <AjaxLoader></AjaxLoader>
+                        : competencias.map(obtenerBotonesCompetencias)
+                }
             </div>
         </div>
     );

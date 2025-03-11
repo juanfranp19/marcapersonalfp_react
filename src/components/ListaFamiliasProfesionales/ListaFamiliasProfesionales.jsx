@@ -2,18 +2,21 @@
 import { useEffect, useState } from 'react';
 // componenetes
 import BotonFiltrador from '../BotonFiltrador/BotonFiltrador';
+import CheckboxDesplegable from '../CheckboxDesplegable/CheckboxDesplegable';
+import AjaxLoader from '../AjaxLoader/AjaxLoader';
 // hooks
 import useFamiliasProfesionales from '../../hooks/useFamiliasProfesionales';
 
 const ListaFamiliasProfesionales = (props) => {
 
-    const listaFamilias = useFamiliasProfesionales();
+    const { familiasProfesionales, cargando } = useFamiliasProfesionales();
     const [familiasFiltradas, setFamiliasFiltradas] = useState([]);
+    const [checked, setchecked] = useState(true);
 
     function handleFamilias(e) {
 
         if (e.target.checked) {
-            const resultadoFamilias = listaFamilias.filter((familia) => familia.codigo === e.target.id);
+            const resultadoFamilias = familiasProfesionales.filter((familia) => familia.codigo === e.target.id);
             setFamiliasFiltradas([...familiasFiltradas, ...resultadoFamilias]);
 
         } else {
@@ -27,9 +30,13 @@ const ListaFamiliasProfesionales = (props) => {
     }
 
     function obtenerBotonesFamilias(familia) {
-        return (
+        if (checked) return (
             <BotonFiltrador key={familia.id} id={familia.codigo} nombre={familia.nombre} onChange={handleFamilias}></BotonFiltrador>
         );
+    }
+
+    function isChecked() {
+        setchecked(!checked);
     }
 
     useEffect(mandarFamiliasFiltradas, [familiasFiltradas]);
@@ -37,8 +44,12 @@ const ListaFamiliasProfesionales = (props) => {
     return (
         <div className='row lista-filtrado-botones'>
             <div className="col-12">
-                <h1>Filtra por familia profesional</h1>
-                {listaFamilias.map(obtenerBotonesFamilias)}
+                <h1>Filtra por familia profesional <CheckboxDesplegable isChecked={isChecked}></CheckboxDesplegable></h1>
+                {
+                    cargando
+                        ? <AjaxLoader></AjaxLoader>
+                        : familiasProfesionales.map(obtenerBotonesFamilias)
+                }
             </div>
         </div>
     );

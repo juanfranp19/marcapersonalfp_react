@@ -3,6 +3,62 @@
   width: 100px;
 }
 
+/*------ Settings ------*/
+.container-checkboxdespl {
+  --size: 15px;
+  padding: 15px 25px 15px 15px;
+  position: relative;
+  cursor: pointer;
+  font-size: var(--size);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  fill: #f59432;
+}
+.container-checkboxdespl .chevron-right-checkboxdespl {
+  position: absolute;
+  animation: keyframes-return 0.5s;
+}
+.container-checkboxdespl .chevron-down-checkboxdespl {
+  position: absolute;
+  display: none;
+  animation: keyframes-fill 0.5s;
+}
+.container-checkboxdespl input {
+  /* ------ Hide the default checkbox ------ */
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+  /* ------ On check event ------ */
+}
+.container-checkboxdespl input:checked ~ .chevron-right-checkboxdespl {
+  display: none;
+}
+.container-checkboxdespl input:checked ~ .chevron-down-checkboxdespl {
+  display: block;
+}
+
+/* ------ Animation ------ */
+@keyframes keyframes-fill {
+  0% {
+    transform: rotate(-90deg) scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: rotate(0deg) scale(1.2);
+  }
+}
+@keyframes keyframes-return {
+  0% {
+    transform: rotate(90deg) scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: rotate(0deg) scale(1.2);
+  }
+}
 .cabecera {
   background-color: #364f59;
 }
