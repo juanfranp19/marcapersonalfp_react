@@ -9,7 +9,7 @@ import { useEffect } from 'react';
 
 const ResultadosBusquedaAlumnos = (props) => {
 
-    const { cargando, users, setPage } = useUsers();
+    const { users, setPage, hasMore } = useUsers();
 
     function obtenerNextPage() {
         setPage(prevPage => prevPage + 1);
@@ -66,7 +66,7 @@ const ResultadosBusquedaAlumnos = (props) => {
             <InfiniteScroll
                 dataLength={users.length}
                 next={obtenerNextPage}
-                hasMore={true}
+                hasMore={hasMore}
                 loader={<AjaxLoader></AjaxLoader>}
             >
                 <div className='row justify-content-center resultados-busqueda'>

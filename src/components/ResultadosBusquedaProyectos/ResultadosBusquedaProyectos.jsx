@@ -8,7 +8,7 @@ import AjaxLoader from '../AjaxLoader/AjaxLoader';
 
 const ResultadosBusquedaProyectos = (props) => {
 
-    const { cargando, proyectos, setPage } = useProyectos();
+    const { proyectos, setPage, hasMore } = useProyectos();
 
     function obtenerNextPage() {
         setPage(prevPage => prevPage + 1);
@@ -31,13 +31,13 @@ const ResultadosBusquedaProyectos = (props) => {
 
             return (
                 <ProyectoMinCard
-                        key={proyecto.id}
-                        imagen={proyecto.imagen}
-                        nombre={proyecto.nombre}
-                        alumnos={proyecto.participantes.map(p => p.nombre).join(', ')}
-                        tutor={proyecto.docente_id}
-                        ciclos={proyecto.ciclos}
-                    ></ProyectoMinCard>
+                    key={proyecto.id}
+                    imagen={proyecto.imagen}
+                    nombre={proyecto.nombre}
+                    alumnos={proyecto.participantes.map(p => p.nombre).join(', ')}
+                    tutor={proyecto.docente_id}
+                    ciclos={proyecto.ciclos}
+                ></ProyectoMinCard>
             );
         });
     }
@@ -47,7 +47,7 @@ const ResultadosBusquedaProyectos = (props) => {
             <InfiniteScroll
                 dataLength={proyectos.length}
                 next={obtenerNextPage}
-                hasMore={true}
+                hasMore={hasMore}
                 loader={<AjaxLoader></AjaxLoader>}
             >
                 <div className='row justify-content-center resultados-busqueda'>
