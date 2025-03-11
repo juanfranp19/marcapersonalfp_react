@@ -11,7 +11,7 @@ const ListaFamiliasProfesionales = (props) => {
 
     const { familiasProfesionales, cargando } = useFamiliasProfesionales();
     const [familiasFiltradas, setFamiliasFiltradas] = useState([]);
-    const [checked, setchecked] = useState(true);
+    const [checked, setchecked] = useState(false);
 
     function handleFamilias(e) {
 
