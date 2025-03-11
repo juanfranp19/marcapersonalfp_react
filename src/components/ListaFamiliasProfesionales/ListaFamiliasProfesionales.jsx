@@ -1,5 +1,5 @@
 // librerías
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 // componenetes
 import BotonFiltrador from '../BotonFiltrador/BotonFiltrador';
 import CheckboxDesplegable from '../CheckboxDesplegable/CheckboxDesplegable';
@@ -7,8 +7,12 @@ import AjaxLoader from '../AjaxLoader/AjaxLoader';
 // hooks
 import useFamiliasProfesionales from '../../hooks/useFamiliasProfesionales';
 
+import traducciones from '../../mock-traducciones';
+import TraduccionContext from '../../contexts/TraduccionContext';
+
 const ListaFamiliasProfesionales = (props) => {
 
+    const idioma = useContext(TraduccionContext);
     const { familiasProfesionales, cargando } = useFamiliasProfesionales();
     const [familiasFiltradas, setFamiliasFiltradas] = useState([]);
     const [checked, setchecked] = useState(false);
@@ -44,7 +48,7 @@ const ListaFamiliasProfesionales = (props) => {
     return (
         <div className='row lista-filtrado-botones'>
             <div className="col-12">
-                <h1>Filtra por familia profesional <CheckboxDesplegable isChecked={isChecked}></CheckboxDesplegable></h1>
+                <h1>{traducciones[idioma].empresa_filtros.familias_profesionales} <CheckboxDesplegable isChecked={isChecked}></CheckboxDesplegable></h1>
                 {
                     cargando
                         ? <AjaxLoader></AjaxLoader>

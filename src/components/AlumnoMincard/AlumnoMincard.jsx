@@ -1,13 +1,17 @@
 // librerías
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { Tooltip } from 'react-tooltip';
 // mocks
 import banderas from '../../mock-banderas';
 // imágenes
 import imagenAlumnoDefecto from '../../assets/images/alumno.svg';
 
+import traducciones from '../../mock-traducciones';
+import TraduccionContext from '../../contexts/TraduccionContext';
+
 const AlumnoMincard = (props) => {
 
+    const idioma = useContext(TraduccionContext);
     const [imagenAlumno, setImagenAlumno] = useState([]);
 
     function obtenerImagenAlumno() {
@@ -39,13 +43,13 @@ const AlumnoMincard = (props) => {
     }
 
     function centificado(certificado) {
-        if (certificado === 0) return 'SC';
-        if (certificado === 1) return 'C';
+        if (certificado === 0) return traducciones[idioma].alumno_mincard.sc;
+        if (certificado === 1) return traducciones[idioma].alumno_mincard.c;
     }
 
     function certificadoTooltip(certificado) {
-        if (certificado === 0) return 'sin centificar';
-        if (certificado === 1) return 'certificado';
+        if (certificado === 0) return traducciones[idioma].alumno_mincard.sin_certificar;
+        if (certificado === 1) return traducciones[idioma].alumno_mincard.certificado;
     }
 
     function tablaIdiomas() {
@@ -128,8 +132,17 @@ const AlumnoMincard = (props) => {
 
                         {tablaIdiomas()}
 
-                        <p><span className='negrita'>Perfiles.</span></p>
-                        <div><span className='negrita'>Ciclos: </span>{ciclos()}</div>
+                        <p>
+                            <span className='negrita'>
+                                {traducciones[idioma].alumno_mincard.perfiles}.
+                            </span>
+                        </p>
+
+                        <div>
+                            <span className='negrita'>
+                                {traducciones[idioma].alumno_mincard.ciclos}:
+                            </span> {ciclos()}
+                        </div>
 
                     </div>
                 </div>

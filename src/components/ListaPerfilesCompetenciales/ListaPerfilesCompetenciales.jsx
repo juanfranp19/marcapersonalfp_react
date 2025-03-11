@@ -1,5 +1,5 @@
 // librerías
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 // componentes
 import BotonFiltrador from '../BotonFiltrador/BotonFiltrador';
 import CheckboxDesplegable from '../CheckboxDesplegable/CheckboxDesplegable';
@@ -7,8 +7,12 @@ import AjaxLoader from '../AjaxLoader/AjaxLoader';
 // hooks
 import useCompetencias from '../../hooks/useCompetencias';
 
+import traducciones from '../../mock-traducciones';
+import TraduccionContext from '../../contexts/TraduccionContext';
+
 const ListaPerfilesCompetenciales = (props) => {
 
+    const idioma = useContext(TraduccionContext);
     const { competencias, cargando } = useCompetencias();
     const [competenciasFiltradas, setCompetenciasFiltradas] = useState([]);
     const [checked, setChecked] = useState(false);
@@ -45,7 +49,7 @@ const ListaPerfilesCompetenciales = (props) => {
     return (
         <div className='row lista-filtrado-botones'>
             <div className="col-12">
-                <h1>Filtra por perfil competencial <CheckboxDesplegable isChecked={isChecked}></CheckboxDesplegable></h1>
+                <h1>{traducciones[idioma].empresa_filtros.competencias} <CheckboxDesplegable isChecked={isChecked}></CheckboxDesplegable></h1>
                 {
                     cargando
                         ? <AjaxLoader></AjaxLoader>
