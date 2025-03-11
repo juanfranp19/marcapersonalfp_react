@@ -72,7 +72,7 @@ const AlumnoMincard = (props) => {
                     <tr>
                         {props.idiomas.map((i, key) => {
                             return (
-                                <td key={key}>{nivel(i.nivel)}</td>
+                                <td key={key} className='negrita'>{nivel(i.nivel)}</td>
                             );
                         })}
                     </tr>
@@ -130,18 +130,22 @@ const AlumnoMincard = (props) => {
 
                         <h1>{props.nombre} {props.apellidos}</h1>
 
-                        {tablaIdiomas()}
+                        <div className="info">
+                            <div>
+                                {tablaIdiomas()}
+                            </div>
 
-                        <p>
-                            <span className='negrita'>
-                                {traducciones[idioma].alumno_mincard.perfiles}.
-                            </span>
-                        </p>
+                            <div>
+                                <span className='negrita'>
+                                    {traducciones[idioma].alumno_mincard.perfiles}.
+                                </span>
+                            </div>
 
-                        <div>
-                            <span className='negrita'>
-                                {traducciones[idioma].alumno_mincard.ciclos}:
-                            </span> {ciclos()}
+                            <div>
+                                <span className='negrita'>
+                                    {traducciones[idioma].alumno_mincard.ciclos}:
+                                </span> {ciclos()}
+                            </div>
                         </div>
 
                     </div>

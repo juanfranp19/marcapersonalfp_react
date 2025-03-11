@@ -356,8 +356,13 @@ body {
   font-size: 15px;
   font-weight: bold;
 }
-.card div, .card p {
+.card div {
   font-size: 12px;
+  padding: 10px;
+}
+.card .info {
+  background-color: #f1f1e6;
+  border-radius: 10px;
 }
 .card .negrita {
   font-weight: bold;

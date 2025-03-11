@@ -22,8 +22,14 @@ body {
         font-weight: bold;
     }
 
-    div, p {
+    div {
         font-size: 12px;
+        padding: 10px;
+    }
+
+    .info {
+        background-color: $tonoBlanco;
+        border-radius: 10px;
     }
 
     .negrita {

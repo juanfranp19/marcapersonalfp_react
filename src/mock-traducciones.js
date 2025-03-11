@@ -29,6 +29,11 @@ const traducciones = {
             sc: 'SC',
             perfiles: 'Perfiles',
             ciclos: 'Ciclos'
+        },
+        proyecto_mincard: {
+            alumnos: 'ALUMNOS',
+            tutor: 'Tutor',
+            ciclos: 'Ciclos',
         }
     },
     en: {
@@ -61,6 +66,11 @@ const traducciones = {
             sc: 'UC',
             perfiles: 'Profiles',
             ciclos: 'Cycles'
+        },
+        proyecto_mincard: {
+            alumnos: 'STUDENTS',
+            tutor: 'Tutor',
+            ciclos: 'Cycles',
         }
     }
 }

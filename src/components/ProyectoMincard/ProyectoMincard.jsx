@@ -1,11 +1,15 @@
 // librerías
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { Tooltip } from 'react-tooltip';
 // imagenes
 import imagenProyectoDefecto from '../../assets/images/proyecto.svg';
 
+import traducciones from '../../mock-traducciones';
+import TraduccionContext from '../../contexts/TraduccionContext';
+
 const ProyectoMinCard = (props) => {
 
+    const idioma = useContext(TraduccionContext);
     const [imagenProyecto, setImagenProyecto] = useState([]);
 
     function obtenerImagenProyecto() {
@@ -47,11 +51,21 @@ const ProyectoMinCard = (props) => {
 
                         <h1>{props.nombre}</h1>
 
-                        <h2>ALUMNOS</h2>
-                        <p>{props.alumnos}</p>
+                        <div className="info">
+                            <h2>{traducciones[idioma].proyecto_mincard.alumnos}</h2>
 
-                        <p><span>Tutor:</span> {props.tutor}</p>
-                        <div><span>Ciclos:</span> {ciclos()}</div>
+                            <div>{props.alumnos}</div>
+
+                            <div>
+                                <span className='negrita'>{traducciones[idioma].proyecto_mincard.tutor}: </span>
+                                {props.tutor}
+                            </div>
+
+                            <div>
+                                <span className='negrita'>{traducciones[idioma].proyecto_mincard.ciclos}: </span>
+                                {ciclos()}
+                            </div>
+                        </div>
 
                     </div>
 
